@@ -13,6 +13,12 @@ export const SILICON_ORE = 'Silicon Ore';
 export const TITANIUM_ORE = 'Titanium Ore';
 export const STONE_ORE = 'Stone Ore';
 export const COAL_ORE = 'Coal Ore';
+export const FRACTAL_SILICON = 'Fractal Silicon';
+export const KIMBERLITE_ORE = 'Kimberlite Ore';
+export const UNIPOLAR_MAGNET = 'Unipolar magnet';
+export const OPTICAL_GRATING_CRYSTAL = 'Optical Grating Crystal';
+export const SPINIFORM_STALGMITE_CRYSTAL = 'Spiniform Stalagmite Crystal';
+
 
 // -----------------------------------------------------------------------------------------
 // Components

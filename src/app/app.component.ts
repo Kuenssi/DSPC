@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Item} from './api/model/item';
-import {ASSEMBLER_MK_1_MULTI, ASSEMBLER_MK_2_MULTI, ASSEMBLER_MK_3_MULTI} from './api/util/numbers';
+import {ASSEMBLER_MK_1_MULTI, ASSEMBLER_MK_2_MULTI, ASSEMBLER_MK_3_MULTI, BASE_MINING} from './api/util/numbers';
 import {ElectricMotor} from './api/model/components/cat3/electricMotor';
 
 @Component({
@@ -13,6 +13,7 @@ export class AppComponent {
   version = '0.0.1';
 
   results: Result[];
+  displayList: Result[];
 
   currentMultiplier: number;
   wantedItem: Item;
@@ -22,6 +23,8 @@ export class AppComponent {
   mark2: boolean;
   mark3: boolean;
 
+  fasterMiningPercent: number;
+
   constructor() {
     this.wantedItem = new ElectricMotor();
     this.mark1 = true;
@@ -29,7 +32,9 @@ export class AppComponent {
     this.mark3 = false;
     this.currentMultiplier = ASSEMBLER_MK_1_MULTI;
     this.wantedOutput = 60;
+    this.fasterMiningPercent = 0;
     this.results = [];
+    this.displayList = [];
   }
 
   //////////
@@ -55,13 +60,26 @@ export class AppComponent {
     this.results = [];
     this.evaluateAssemblerLevel();
     this.calc(this.wantedItem, this.wantedOutput, this.currentMultiplier);
+    this.evaluateDisplayList();
   }
 
   //////////
   // Logic
   //////////
+
   calc(wantedItem: Item, wantedOutput: number, currentMultiplier: number) {
-    if (!wantedItem.processingTime) return;
+    if (wantedItem.baseItem) {
+      let currentOutput = BASE_MINING * (1 + (this.fasterMiningPercent / 100));
+      console.log(currentOutput);
+
+      let result = new Result();
+      result.item = wantedItem;
+      result.neededBuildings = wantedOutput / currentOutput;
+
+      this.results.push(result);
+
+      return;
+    }
 
     let currentOutput = (60 / wantedItem.processingTime) * wantedItem.outputAmount;
     currentOutput = (currentOutput * currentMultiplier);
@@ -73,10 +91,15 @@ export class AppComponent {
     this.results.push(result);
 
     for (let input of wantedItem.inputs) {
-      let prevMatOutput = result.neededBuildings * input.inputAmount * 60 * currentMultiplier;
+      let prevMatOutput = result.neededBuildings * input.inputAmount * 60;
 
       this.calc(input.item, prevMatOutput, currentMultiplier);
     }
+  }
+
+  evaluateDisplayList() {
+    // merge every single shit and so on
+    this.displayList = this.results;
   }
 
   private evaluateAssemblerLevel() {

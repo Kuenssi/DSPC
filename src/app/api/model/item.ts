@@ -6,6 +6,7 @@ export class Item {
   neededMachine!: string;
   inputs: Input[];
   outputAmount!: number;
+  baseItem!: boolean;
 
   constructor() {
     this.inputs = [];

@@ -12,7 +12,7 @@
 
     <mat-divider></mat-divider>
 
-    <div>Select used assemblers</div>
+    <div>Select Assembler level</div>
 
     <mat-slide-toggle [checked]="mark1" (change)="mark1 = toggleAction($event.checked)">Assembler Mark 1
     </mat-slide-toggle>
@@ -45,7 +45,7 @@
 
     <div fxLayout="column" fxLayoutGap="1%">
       <div> Here we go</div>
-      <div *ngFor="let element of results">
+      <div *ngFor="let element of displayList">
         <mat-card class="card" fxFlex="30">
           <mat-card-title>{{element.item.name}}</mat-card-title>
           <mat-card-content>
