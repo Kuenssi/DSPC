@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {Item} from './api/model/item';
 import {ASSEMBLER_MK_1_MULTI, ASSEMBLER_MK_2_MULTI, ASSEMBLER_MK_3_MULTI} from './api/util/numbers';
-import {ConveyorBeltOne} from './api/model/buildings/cat2/conveyorBeltOne';
 import {ElectricMotor} from './api/model/components/cat3/electricMotor';
 
 @Component({
@@ -15,16 +14,21 @@ export class AppComponent {
 
   results: Result[];
 
-  currentMultiplier = ASSEMBLER_MK_1_MULTI;
+  currentMultiplier: number;
   wantedItem: Item;
-  wantedOutput = 60;
+  wantedOutput: number;
 
-  mark1 = true;
-  mark2 = false;
-  mark3 = false;
+  mark1: boolean;
+  mark2: boolean;
+  mark3: boolean;
 
   constructor() {
     this.wantedItem = new ElectricMotor();
+    this.mark1 = true;
+    this.mark2 = false;
+    this.mark3 = false;
+    this.currentMultiplier = ASSEMBLER_MK_1_MULTI;
+    this.wantedOutput = 60;
     this.results = [];
   }
 
@@ -35,8 +39,6 @@ export class AppComponent {
     this.mark1 = false;
     this.mark2 = false;
     this.mark3 = false;
-
-    this.evaluateAssemblerLevel();
 
     return value;
   }
@@ -50,22 +52,23 @@ export class AppComponent {
   }
 
   startCalc() {
-    this.calc(this.wantedItem, this.wantedOutput);
+    this.results = [];
+    this.evaluateAssemblerLevel();
+    this.calc(this.wantedItem, this.wantedOutput, this.currentMultiplier);
   }
 
   //////////
   // Logic
   //////////
-  calc(wantedItem: Item, wantedOutput: number) {
-    if (!this.wantedItem.processingTime) return;
+  calc(wantedItem: Item, wantedOutput: number, currentMultiplier: number) {
+    if (!wantedItem.processingTime) return;
 
-    let currentOutput = (60 / this.wantedItem.processingTime) * this.wantedItem.outputAmount;
-    currentOutput = currentOutput * this.currentMultiplier;
+    let currentOutput = (60 / wantedItem.processingTime) * wantedItem.outputAmount;
+    currentOutput = currentOutput * currentMultiplier;
 
     let result = new Result();
-    result.item = this.wantedItem;
-    result.neededBuildings = this.wantedOutput / currentOutput;
-
+    result.item = wantedItem;
+    result.neededBuildings = wantedOutput / currentOutput;
 
     this.results.push(result)
   }
