@@ -1,9 +1,14 @@
 import {Item} from '../../item';
-import {STONE} from '../../../util/names';
+import {SMELTER, STONE} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {StoneOre} from '../../baseComponents/stoneOre';
 
 export class Stone extends Item {
   name = STONE;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 1;
+  neededMachine = SMELTER;
+  inputs = [
+    new Input(new StoneOre(), 1),
+  ];
+  outputAmount = 1;
 }

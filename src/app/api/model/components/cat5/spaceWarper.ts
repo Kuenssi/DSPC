@@ -1,9 +1,14 @@
 import {Item} from '../../item';
-import {SPACE_WARPER} from '../../../util/names';
+import {ASSEMBLER, SPACE_WARPER} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {GravitonLens} from '../cat4/gravitonLens';
 
 export class SpaceWarper extends Item {
   name = SPACE_WARPER;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 10;
+  neededMachine = ASSEMBLER;
+  inputs = [
+    new Input(new GravitonLens(), 1),
+  ];
+  outputAmount = 1;
 }

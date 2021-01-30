@@ -1,9 +1,14 @@
 import {Item} from '../../item';
-import {ENERGETIC_GRAPHITE} from '../../../util/names';
+import {ENERGETIC_GRAPHITE, SMELTER} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {CoalOre} from '../../baseComponents/coalOre';
 
 export class EnergeticGraphite extends Item {
   name = ENERGETIC_GRAPHITE;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 2;
+  neededMachine = SMELTER;
+  inputs = [
+    new Input(new CoalOre(), 2),
+  ];
+  outputAmount = 1;
 }

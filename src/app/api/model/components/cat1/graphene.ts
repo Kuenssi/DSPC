@@ -1,9 +1,16 @@
 import {Item} from '../../item';
-import {GRAPHENE} from '../../../util/names';
+import {CHEMICAL_PLANT, GRAPHENE} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {EnergeticGraphite} from './energeticGraphite';
+import {SulfuricAcid} from '../cat4/sulfuricAcid';
 
 export class Graphene extends Item {
   name = GRAPHENE;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 3;
+  neededMachine = CHEMICAL_PLANT;
+  inputs = [
+    new Input(new EnergeticGraphite(), 3),
+    new Input(new SulfuricAcid(), 1),
+  ];
+  outputAmount = 2;
 }

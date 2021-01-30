@@ -1,9 +1,16 @@
 import {Item} from '../../item';
-import {SOLAR_SAIL} from '../../../util/names';
+import {ASSEMBLER, SOLAR_SAIL} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {Graphene} from '../cat1/graphene';
+import {PhotonCombiner} from '../cat6/photonCombiner';
 
 export class SolarSail extends Item {
   name = SOLAR_SAIL;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 4;
+  neededMachine = ASSEMBLER;
+  inputs = [
+    new Input(new Graphene(), 1),
+    new Input(new PhotonCombiner(), 1),
+  ];
+  outputAmount = 2;
 }

@@ -2,6 +2,7 @@
 // Other
 // -----------------------------------------------------------------------------------------
 export const ASSEMBLER = 'Assembler';
+export const RESEARCH_FACILITY = 'Research Facility';
 
 // -----------------------------------------------------------------------------------------
 // Ores
@@ -38,7 +39,7 @@ export const X_RAY_CRACKING = '(Recipe) x-ray cracking';
 export const ORGANIC_CRYSTAL = 'Organic Crystal';
 export const A_GRAPHENE = '(Recipe) Graphene (advanced)';
 export const HYDROGEN_FUEL_ROD = 'Hydrogen Fuel Rod';
-export const DEUTERION_FUEL_ROD = 'Deuterion Fuel Rod';
+export const DEUTERON_FUEL_ROD = 'Deuteron Fuel Rod';
 
 // 3
 export const STEEL = 'Steel';

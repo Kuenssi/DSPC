@@ -1,9 +1,14 @@
 import {Item} from '../../item';
-import {DEUTERIUM} from '../../../util/names';
+import {DEUTERIUM, MINI_PARTICLE_COLLIDER} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {Hydrogen} from '../../baseComponents/hydrogen';
 
 export class Deuterium extends Item {
   name = DEUTERIUM;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 5;
+  neededMachine = MINI_PARTICLE_COLLIDER;
+  inputs = [
+    new Input(new Hydrogen(), 10),
+  ];
+  outputAmount = 5;
 }

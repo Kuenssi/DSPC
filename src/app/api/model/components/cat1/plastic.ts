@@ -1,9 +1,16 @@
 import {Item} from '../../item';
-import {PLASTIC} from '../../../util/names';
+import {CHEMICAL_PLANT, PLASTIC} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {RefinedOil} from '../../baseComponents/refinedOil';
+import {EnergeticGraphite} from './energeticGraphite';
 
 export class Plastic extends Item {
   name = PLASTIC;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 3;
+  neededMachine = CHEMICAL_PLANT;
+  inputs = [
+    new Input(new RefinedOil(), 2),
+    new Input(new EnergeticGraphite(), 1),
+  ];
+  outputAmount = 1;
 }

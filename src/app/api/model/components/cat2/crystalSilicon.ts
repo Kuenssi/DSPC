@@ -1,9 +1,14 @@
 import {Item} from '../../item';
-import {CRYSTAL_SILICON} from '../../../util/names';
+import {CRYSTAL_SILICON, SMELTER} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {HighPuritySilicon} from '../cat1/highPuritySilicon';
 
 export class CrystalSilicon extends Item {
   name = CRYSTAL_SILICON;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 2;
+  neededMachine = SMELTER;
+  inputs = [
+    new Input(new HighPuritySilicon(), 1),
+  ];
+  outputAmount = 1;
 }

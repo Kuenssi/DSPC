@@ -3,7 +3,7 @@ import {ASSEMBLER, VERTICAL_LAUNCHING_SILO} from '../../../util/names';
 import {Input} from '../../../util/input';
 import {TitaniumAlloy} from '../../components/cat2/titaniumAlloy';
 import {FrameMaterial} from '../../components/cat5/frameMaterial';
-import {GravitonLens} from '../../components/cat4/GravitonLens';
+import {GravitonLens} from '../../components/cat4/gravitonLens';
 import {QuantumChip} from '../../components/cat6/quantumChip';
 
 export class VerticalLaunchingSilo extends Item {

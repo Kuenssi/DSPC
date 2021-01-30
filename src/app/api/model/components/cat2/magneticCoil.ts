@@ -1,9 +1,16 @@
 import {Item} from '../../item';
-import {MAGNETIC_COIL} from '../../../util/names';
+import {ASSEMBLER, MAGNETIC_COIL} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {Magnet} from './magnet';
+import {CopperIngot} from '../cat1/copperIngot';
 
 export class MagneticCoil extends Item {
   name = MAGNETIC_COIL;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 1;
+  neededMachine = ASSEMBLER;
+  inputs = [
+    new Input(new Magnet(), 2),
+    new Input(new CopperIngot(), 1),
+  ];
+  outputAmount = 2;
 }

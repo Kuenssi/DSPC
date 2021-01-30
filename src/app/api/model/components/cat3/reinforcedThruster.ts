@@ -1,9 +1,16 @@
 import {Item} from '../../item';
-import {REINFORCED_THRUSTER} from '../../../util/names';
+import {ASSEMBLER, REINFORCED_THRUSTER} from '../../../util/names';
+import {Input} from '../../../util/input';
+import {TitaniumAlloy} from '../cat2/titaniumAlloy';
+import {ElectromagneticTurbine} from '../cat4/electromagneticTurbine';
 
 export class ReinforcedThruster extends Item {
   name = REINFORCED_THRUSTER;
-  processingTime = ;
-  neededMachine = ;
-  inputs = [];
+  processingTime = 6;
+  neededMachine = ASSEMBLER;
+  inputs = [
+    new Input(new TitaniumAlloy(), 5),
+    new Input(new ElectromagneticTurbine(), 5),
+  ];
+  outputAmount = 1;
 }
