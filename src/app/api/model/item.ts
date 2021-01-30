@@ -5,6 +5,7 @@ export class Item {
   processingTime!: number;
   neededMachine!: string;
   inputs: Input[];
+  outputAmount!: number;
 
   constructor() {
     this.inputs = [];
