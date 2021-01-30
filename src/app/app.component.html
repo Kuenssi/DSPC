@@ -32,7 +32,7 @@
 
     <div>
       <label>Insert Output:
-        <input type="number" (keyup)="setOutput($event)">
+        <input type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
         /min
       </label>
     </div>
@@ -43,10 +43,15 @@
 
     <mat-divider></mat-divider>
 
-    <div>
-      <span> Here we go </span>
+    <div fxLayout="column" fxLayoutGap="1%">
+      <div> Here we go</div>
       <div *ngFor="let element of results">
-        <div>{{element.item.name}} needs {{element.neededBuildings}} {{element.item.neededMachine}}</div>
+        <mat-card class="card" fxFlex="30">
+          <mat-card-title>{{element.item.name}}</mat-card-title>
+          <mat-card-content>
+            {{element.neededBuildings.toFixed(2)}}x {{element.item.neededMachine}}
+          </mat-card-content>
+        </mat-card>
       </div>
     </div>
   </div>

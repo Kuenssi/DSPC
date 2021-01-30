@@ -7,6 +7,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatDividerModule} from '@angular/material/divider';
 import {ReactiveFormsModule} from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppRoutingModule,
     MatSlideToggleModule,
     MatDividerModule,
+    MatCardModule,
     FlexLayoutModule,
     ReactiveFormsModule
   ],

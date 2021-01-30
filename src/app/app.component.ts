@@ -33,7 +33,7 @@ export class AppComponent {
   }
 
   //////////
-  // UiActions
+  // Ui Actions
   //////////
   toggleAction(value: boolean): boolean {
     this.mark1 = false;
@@ -64,13 +64,19 @@ export class AppComponent {
     if (!wantedItem.processingTime) return;
 
     let currentOutput = (60 / wantedItem.processingTime) * wantedItem.outputAmount;
-    currentOutput = currentOutput * currentMultiplier;
+    currentOutput = (currentOutput * currentMultiplier);
 
     let result = new Result();
     result.item = wantedItem;
     result.neededBuildings = wantedOutput / currentOutput;
 
-    this.results.push(result)
+    this.results.push(result);
+
+    for (let input of wantedItem.inputs) {
+      let prevMatOutput = result.neededBuildings * input.inputAmount * 60 * currentMultiplier;
+
+      this.calc(input.item, prevMatOutput, currentMultiplier);
+    }
   }
 
   private evaluateAssemblerLevel() {
