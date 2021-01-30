@@ -1,5 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #161616" fxLayout="row"
-     fxLayoutGap="1%">
-  <span class="titleString">{{title}}</span>
-  <span class="versionNumber" >v.0.0.1</span>
-</nav>
+<div fxLayout="row" fxFlex>
+  <div fxLayout="column" fxFlex>
+    <div>
+      <div fxLayoutAlign="center">{{title}}</div>
+      <div fxLayoutAlign="center">v.{{version}}</div>
+    </div>
+
+    <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
+
+    <div fxLayoutAlign="center"> Select your current research progress</div>
+
+    <mat-divider></mat-divider>
+
+    <div>Select used assemblers</div>
+
+    <mat-slide-toggle [checked]="mark1" (change)="mark1 = toggleAction($event.checked)">Assembler Mark 1
+    </mat-slide-toggle>
+    <mat-slide-toggle [checked]="mark2" (change)="mark2 = toggleAction($event.checked)">Assembler Mark 2
+    </mat-slide-toggle>
+    <mat-slide-toggle [checked]="mark3" (change)="mark3 = toggleAction($event.checked)">Assembler Mark 3
+    </mat-slide-toggle>
+
+    <mat-divider></mat-divider>
+
+    <div>
+      <div>Select what you want to build:</div>
+      <button (change)="selectItem(wantedItem)">{{wantedItem.name}}</button>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div>
+      <label>Insert Output:
+        <input type="number" (keyup)="setOutput($event)">
+        /min
+      </label>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <button (click)="startCalc()">Calculate</button>
+
+    <mat-divider></mat-divider>
+
+    <div>
+      <span> Here we go </span>
+      <div *ngFor="let element of results">
+        <div>{{element.item.name}} needs {{element.neededBuildings}} {{element.item.neededMachine}}</div>
+      </div>
+    </div>
+  </div>
+</div>
