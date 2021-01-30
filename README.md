@@ -1,1 +1,1 @@
-A little calculator for Dyson Sphere Program-
+A little calculator for Dyson Sphere Program.
