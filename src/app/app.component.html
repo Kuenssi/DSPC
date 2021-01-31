@@ -65,7 +65,7 @@
               <span>{{cat.categoryNumber}}</span>
             </td>
             <td *ngFor="let building of cat.buildings" fxFlex>
-              <button (click)="selectItem(building)">{{building.name}}</button>
+              <button fxFlex (click)="selectItem(building)">{{building.name}}</button>
             </td>
           </tr>
           </tbody>
@@ -92,7 +92,7 @@
               <span>{{cat.categoryNumber}}</span>
             </td>
             <td *ngFor="let component of cat.components" fxFlex fxLayoutGap="0.25rem">
-              <button (click)="selectItem(component)">{{component.name}}</button>
+              <button fxFlex (click)="selectItem(component)">{{component.name}}</button>
             </td>
           </tr>
           </tbody>
