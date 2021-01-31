@@ -3,6 +3,7 @@ import {Item} from './api/model/item';
 import {AllBuildings} from './api/model/buildings/allBuildings';
 import {AllComponents} from './api/model/components/allComponents';
 import {ASSEMBLER} from './api/util/constants/names';
+import {Input} from './api/util/input';
 
 @Component({
   selector: 'app-root',
@@ -70,10 +71,20 @@ export class AppComponent {
     this.results.push(result);
 
     for (let input of wantedItem.inputs) {
-      let prevMatOutput = result.neededBuildings * input.inputAmount * 60;
+      let prevMatOutput = result.neededBuildings * this.calculateNeededInput(wantedItem, input);
+
+      //prevMatOutput = result.neededBuildings * calculate Input needed per minute for one assembler or something like that
 
       this.calc(input.item, prevMatOutput, currentMultiplier, iteration + 1);
     }
+  }
+
+  calculateNeededInput(wantedItem: Item, neededItem: Input): number {
+    let result;
+
+    result = (60 / wantedItem.processingTime) * neededItem.inputAmount;
+
+    return result;
   }
 
   calculateCurrentOutput(wantedItem: Item, currentMultiplier: number): number {
