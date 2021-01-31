@@ -6,3 +6,7 @@
 .titleString {
   color: white;
 }
+
+.mat-card {
+  background: lightgray;
+}

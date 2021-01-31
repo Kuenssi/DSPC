@@ -105,7 +105,7 @@
     <div fxLayout="column" fxLayoutGap="1%">
       <div fxLayoutAlign="center"> The holy calculation area (in fugly)</div>
       <div *ngFor="let element of displayList">
-        <mat-card class="card" fxFlex="30">
+        <mat-card class="mat-card" fxFlex="30">
           <mat-card-title>{{element.item.name}}</mat-card-title>
           <mat-card-content>
             {{element.neededBuildings.toFixed(2)}}x {{element.item.neededMachine}}
