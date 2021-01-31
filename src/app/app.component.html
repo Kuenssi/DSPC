@@ -8,24 +8,81 @@
     <mat-divider></mat-divider>
     <mat-divider></mat-divider>
 
-    <div fxLayoutAlign="center"> Select your current research progress</div>
+    <div fxLayoutAlign="center"> Select your current research progress (Veins utilization) Stufe 0 bis 6 pro Stufe +10%
+      mining speed -> 10, 20 , 30 (nur ein faktor)
+    </div>
 
     <mat-divider></mat-divider>
 
-    <div>Select Assembler level</div>
+    <div fxLayoutAlign="center">Select Assembler level</div>
 
-    <mat-slide-toggle [checked]="mark1" (change)="mark1 = toggleAction($event.checked)">Assembler Mark 1
-    </mat-slide-toggle>
-    <mat-slide-toggle [checked]="mark2" (change)="mark2 = toggleAction($event.checked)">Assembler Mark 2
-    </mat-slide-toggle>
-    <mat-slide-toggle [checked]="mark3" (change)="mark3 = toggleAction($event.checked)">Assembler Mark 3
-    </mat-slide-toggle>
+    <div fxLayoutAlign="center">
+      <div fxLayoutAlign="center" fxLayout="column">
+        <mat-slide-toggle [checked]="mark1" (change)="mark1 = toggleAction($event.checked)">Assembler Mark 1
+        </mat-slide-toggle>
+        <mat-slide-toggle [checked]="mark2" (change)="mark2 = toggleAction($event.checked)">Assembler Mark 2
+        </mat-slide-toggle>
+        <mat-slide-toggle [checked]="mark3" (change)="mark3 = toggleAction($event.checked)">Assembler Mark 3
+        </mat-slide-toggle>
+      </div>
+    </div>
 
     <mat-divider></mat-divider>
 
     <div>
-      <div>Select what you want to build:</div>
-      <button (change)="selectItem(wantedItem)">{{wantedItem.name}}</button>
+      <div fxLayoutAlign="center">Current Selection: {{wantedItem.name}}</div>
+      <mat-divider></mat-divider>
+      <div fxLayoutAlign="center">
+        <table class="table table-hover">
+          <thead>
+          <tr fxLayout="row" fxFlex>
+            <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex="5" fxLayoutAlign="center">
+              <span>Cat</span>
+            </th>
+            <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex fxLayoutAlign="center">
+              <span>Buildings</span>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let cat of allBuildings.buildings">
+            <td fxFlex="5" fxLayoutAlign="center">
+              <span>{{cat.categoryNumber}}</span>
+            </td>
+            <td *ngFor="let building of cat.buildings" fxFlex>
+              <button (click)="selectItem(building)">{{building.name}}</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div fxLayoutAlign="center">
+        <table class="table table-hover">
+          <thead>
+          <tr fxLayout="row" fxFlex fxLayoutGap="0.25rem">
+            <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex="5" fxLayoutAlign="center">
+              <span>Cat</span>
+            </th>
+            <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex fxLayoutAlign="center">
+              <span>Components</span>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let cat of allComponents.components" fxLayoutGap="0.25rem">
+            <td fxFlex="5" fxLayoutAlign="center">
+              <span>{{cat.categoryNumber}}</span>
+            </td>
+            <td *ngFor="let component of cat.components" fxFlex fxLayoutGap="0.25rem">
+              <button (click)="selectItem(component)">{{component.name}}</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <mat-divider></mat-divider>

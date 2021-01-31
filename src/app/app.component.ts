@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {Item} from './api/model/item';
 import {ASSEMBLER_MK_1_MULTI, ASSEMBLER_MK_2_MULTI, ASSEMBLER_MK_3_MULTI, BASE_MINING} from './api/util/numbers';
 import {ElectricMotor} from './api/model/components/cat3/electricMotor';
+import {AllBuildings} from './api/model/buildings/allBuildings';
+import {AllComponents} from './api/model/components/allComponents';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,9 @@ export class AppComponent {
   mark3: boolean;
 
   fasterMiningPercent: number;
+
+  allBuildings = new AllBuildings();
+  allComponents = new AllComponents();
 
   constructor() {
     this.wantedItem = new ElectricMotor();
