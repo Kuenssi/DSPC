@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {HIGH_PURITY_SILICON, SMELTER} from '../../../util/names';
+import {HIGH_PURITY_SILICON, SMELTER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {SiliconOre} from '../../baseComponents/siliconOre';
 

@@ -1,5 +1,5 @@
 import {Item} from '../item';
-import {FRACTAL_SILICON, MINING_MACHINE} from '../../util/names';
+import {FRACTAL_SILICON, MINING_MACHINE} from '../../util/constants/names';
 
 export class FractalSilicon extends Item {
   name = FRACTAL_SILICON;

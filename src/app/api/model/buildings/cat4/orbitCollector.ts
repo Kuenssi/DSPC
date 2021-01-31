@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, ORBIT_COLLECTOR} from '../../../util/names';
+import {ASSEMBLER, ORBIT_COLLECTOR} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {InterstellarLogisticsStation} from '../cat3/interstellarLogisticsStation';
 import {SuperMagneticRing} from '../../components/cat5/superMagneticRing';

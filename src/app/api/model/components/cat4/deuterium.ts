@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {DEUTERIUM, MINI_PARTICLE_COLLIDER} from '../../../util/names';
+import {DEUTERIUM, MINI_PARTICLE_COLLIDER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {Hydrogen} from '../../baseComponents/hydrogen';
 

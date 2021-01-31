@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {RESEARCH_FACILITY, STRUCTURE_MATRIX} from '../../../util/names';
+import {RESEARCH_FACILITY, STRUCTURE_MATRIX} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {Diamond} from '../cat2/diamond';
 import {TitaniumCrystal} from '../cat3/titaniumCrystal';

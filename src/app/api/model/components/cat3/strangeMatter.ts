@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {MINI_PARTICLE_COLLIDER, STRANGE_MATTER} from '../../../util/names';
+import {MINI_PARTICLE_COLLIDER, STRANGE_MATTER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {ParticleContainer} from '../cat5/particleContainer';
 import {IronIngot} from '../cat1/ironIngot';

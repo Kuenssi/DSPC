@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, FOUNDATION} from '../../../util/names';
+import {ASSEMBLER, FOUNDATION} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {Stone} from '../cat1/stone';
 import {Steel} from '../cat3/steel';

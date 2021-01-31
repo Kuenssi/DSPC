@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {SMELTER, STEEL} from '../../../util/names';
+import {SMELTER, STEEL} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {IronIngot} from '../cat1/ironIngot';
 

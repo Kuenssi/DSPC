@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {DIAMOND, SMELTER} from '../../../util/names';
+import {DIAMOND, SMELTER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {EnergeticGraphite} from '../cat1/energeticGraphite';
 

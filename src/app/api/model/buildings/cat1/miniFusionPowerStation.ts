@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, MINI_FUSION_POWER_STATION} from '../../../util/names';
+import {ASSEMBLER, MINI_FUSION_POWER_STATION} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {TitaniumAlloy} from '../../components/cat2/titaniumAlloy';
 import {SuperMagneticRing} from '../../components/cat5/superMagneticRing';

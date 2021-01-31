@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, PHOTON_COMBINER} from '../../../util/names';
+import {ASSEMBLER, PHOTON_COMBINER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {Prisma} from '../cat3/prisma';
 import {CircuitBoard} from '../cat4/circuitBoard';

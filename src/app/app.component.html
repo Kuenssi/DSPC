@@ -27,7 +27,7 @@
       <div fxFlex>
         <div fxLayoutAlign="center">Select Assembler level</div>
         <div fxLayoutAlign="center">
-          <mat-radio-group [(ngModel)]="currentMultiplier" fxLayout="column" (change)="startCalc()">
+          <mat-radio-group [(ngModel)]="currentAssemblerMultiplier" fxLayout="column" (change)="startCalc()">
             <mat-radio-button [value]="0.75">Mk. 1</mat-radio-button>
             <mat-radio-button [value]="1">Mk. 2</mat-radio-button>
             <mat-radio-button [value]="1.5">Mk. 3</mat-radio-button>
@@ -108,7 +108,7 @@
         <mat-card class="mat-card" fxFlex="30">
           <mat-card-title>{{element.item.name}}</mat-card-title>
           <mat-card-content>
-            {{element.neededBuildings.toFixed(2)}}x {{element.item.neededMachine}}
+            {{element.neededBuildings.toFixed(2)}}x {{element.item.veinType || element.item.neededMachine}}
           </mat-card-content>
         </mat-card>
       </div>

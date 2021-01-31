@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, PARTICLE_CONTAINER} from '../../../util/names';
+import {ASSEMBLER, PARTICLE_CONTAINER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {ElectromagneticTurbine} from '../cat4/electromagneticTurbine';
 import {CopperIngot} from '../cat1/copperIngot';

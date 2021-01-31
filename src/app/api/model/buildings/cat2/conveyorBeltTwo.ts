@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, CONVEYOR_BELT_MK_2} from '../../../util/names';
+import {ASSEMBLER, CONVEYOR_BELT_MK_2} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {ConveyorBeltOne} from './conveyorBeltOne';
 import {ElectromagneticTurbine} from '../../components/cat4/electromagneticTurbine';

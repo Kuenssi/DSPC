@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, ASSEMBLING_MACHINE_MK_3} from '../../../util/names';
+import {ASSEMBLER, ASSEMBLING_MACHINE_MK_3} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {AssemblerTwo} from './assemblerTwo';
 import {ParticleBroadband} from '../../components/cat5/particleBroadband';

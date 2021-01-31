@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, FRAME_MATERIAL} from '../../../util/names';
+import {ASSEMBLER, FRAME_MATERIAL} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {CarbonNanotube} from '../cat4/carbonNanotube';
 import {TitaniumAlloy} from '../cat2/titaniumAlloy';

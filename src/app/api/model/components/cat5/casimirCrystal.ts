@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, CASIMIR_CRYSTAL} from '../../../util/names';
+import {ASSEMBLER, CASIMIR_CRYSTAL} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {TitaniumCrystal} from '../cat3/titaniumCrystal';
 import {Graphene} from '../cat1/graphene';

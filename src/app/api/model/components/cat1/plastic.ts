@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {CHEMICAL_PLANT, PLASTIC} from '../../../util/names';
+import {CHEMICAL_PLANT, PLASTIC} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {RefinedOil} from '../../baseComponents/refinedOil';
 import {EnergeticGraphite} from './energeticGraphite';

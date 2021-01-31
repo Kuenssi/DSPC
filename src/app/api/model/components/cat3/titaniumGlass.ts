@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, TITANIUM_GLASS} from '../../../util/names';
+import {ASSEMBLER, TITANIUM_GLASS} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {Glass} from '../cat2/glass';
 import {TitaniumIngot} from '../cat1/titaniumIngot';

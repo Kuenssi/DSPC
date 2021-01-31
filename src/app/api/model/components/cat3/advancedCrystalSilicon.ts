@@ -1,6 +1,6 @@
 import {Item} from '../../item';
 import {Input} from '../../../util/input';
-import {A_CRYSTAL_SILICON, ASSEMBLER} from '../../../util/names';
+import {A_CRYSTAL_SILICON, ASSEMBLER} from '../../../util/constants/names';
 import {FractalSilicon} from '../../baseComponents/fractalSilicon';
 
 export class AdvancedCrystalSilicon extends Item {

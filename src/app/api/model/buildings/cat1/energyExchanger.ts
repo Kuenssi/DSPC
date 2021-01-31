@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, ENERGY_EXCHANGER} from '../../../util/names';
+import {ASSEMBLER, ENERGY_EXCHANGER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {TitaniumAlloy} from '../../components/cat2/titaniumAlloy';
 import {Steel} from '../../components/cat3/steel';

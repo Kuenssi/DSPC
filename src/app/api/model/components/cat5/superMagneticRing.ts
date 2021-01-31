@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SUPER_MAGNETIC_RING} from '../../../util/names';
+import {ASSEMBLER, SUPER_MAGNETIC_RING} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {ElectromagneticTurbine} from '../cat4/electromagneticTurbine';
 import {Magnet} from '../cat2/magnet';

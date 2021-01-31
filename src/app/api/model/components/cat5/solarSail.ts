@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SOLAR_SAIL} from '../../../util/names';
+import {ASSEMBLER, SOLAR_SAIL} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {Graphene} from '../cat1/graphene';
 import {PhotonCombiner} from '../cat6/photonCombiner';

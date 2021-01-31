@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, OIL_EXTRACTOR} from '../../../util/names';
+import {ASSEMBLER, OIL_EXTRACTOR} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {Steel} from '../../components/cat3/steel';
 import {Stone} from '../../components/cat1/stone';

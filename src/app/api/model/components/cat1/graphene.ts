@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {CHEMICAL_PLANT, GRAPHENE} from '../../../util/names';
+import {CHEMICAL_PLANT, GRAPHENE} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {EnergeticGraphite} from './energeticGraphite';
 import {SulfuricAcid} from '../cat4/sulfuricAcid';

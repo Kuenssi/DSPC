@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, ASSEMBLING_MACHINE_MK_2} from '../../../util/names';
+import {ASSEMBLER, ASSEMBLING_MACHINE_MK_2} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {AssemblerOne} from './assemblerOne';
 import {Graphene} from '../../components/cat1/graphene';

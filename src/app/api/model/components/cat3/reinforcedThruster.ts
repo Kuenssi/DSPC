@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, REINFORCED_THRUSTER} from '../../../util/names';
+import {ASSEMBLER, REINFORCED_THRUSTER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {TitaniumAlloy} from '../cat2/titaniumAlloy';
 import {ElectromagneticTurbine} from '../cat4/electromagneticTurbine';

@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {CARBON_NANOTUBE, CHEMICAL_PLANT} from '../../../util/names';
+import {CARBON_NANOTUBE, CHEMICAL_PLANT} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {Graphene} from '../cat1/graphene';
 import {TitaniumIngot} from '../cat1/titaniumIngot';

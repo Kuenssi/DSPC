@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, WIRELESS_POWER_TOWER} from '../../../util/names';
+import {ASSEMBLER, WIRELESS_POWER_TOWER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {TeslaTower} from './teslaTower';
 import {PlasmaExciter} from '../../components/cat5/plasmaExciter';

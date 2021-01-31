@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, TITANIUM_CRYSTAL} from '../../../util/names';
+import {ASSEMBLER, TITANIUM_CRYSTAL} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {OrganicCrystal} from '../cat2/organicCrystal';
 import {TitaniumIngot} from '../cat1/titaniumIngot';

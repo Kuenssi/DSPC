@@ -1,7 +1,7 @@
 import {Item} from '../../item';
 import {Input} from '../../../util/input';
 import {KimberliteOre} from '../../baseComponents/kimberliteOre';
-import {A_DIAMOND, SMELTER} from '../../../util/names';
+import {A_DIAMOND, SMELTER} from '../../../util/constants/names';
 
 export class AdvancedDiamond extends Item {
   name = A_DIAMOND;

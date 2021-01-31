@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {COPPER_INGOT, SMELTER} from '../../../util/names';
+import {COPPER_INGOT, SMELTER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {CopperOre} from '../../baseComponents/copperOre';
 

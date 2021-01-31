@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {CHEMICAL_PLANT, SULFURIC_ACID} from '../../../util/names';
+import {CHEMICAL_PLANT, SULFURIC_ACID} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {RefinedOil} from '../../baseComponents/refinedOil';
 import {StoneOre} from '../../baseComponents/stoneOre';

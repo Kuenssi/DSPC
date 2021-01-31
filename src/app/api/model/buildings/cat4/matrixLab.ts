@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, MATRIX_LAB} from '../../../util/names';
+import {ASSEMBLER, MATRIX_LAB} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {IronIngot} from '../../components/cat1/ironIngot';
 import {Glass} from '../../components/cat2/glass';

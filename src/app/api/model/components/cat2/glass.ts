@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {GLASS, SMELTER} from '../../../util/names';
+import {GLASS, SMELTER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {StoneOre} from '../../baseComponents/stoneOre';
 

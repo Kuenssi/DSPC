@@ -7,6 +7,7 @@ export class Item {
   inputs: Input[];
   outputAmount!: number;
   baseItem!: boolean;
+  veinType!: string;
 
   constructor() {
     this.inputs = [];

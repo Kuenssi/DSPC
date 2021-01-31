@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, PARTICLE_BROADBAND} from '../../../util/names';
+import {ASSEMBLER, PARTICLE_BROADBAND} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {CarbonNanotube} from '../cat4/carbonNanotube';
 import {CrystalSilicon} from '../cat2/crystalSilicon';

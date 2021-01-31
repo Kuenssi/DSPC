@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SATELLITE_SUBSTATION} from '../../../util/names';
+import {ASSEMBLER, SATELLITE_SUBSTATION} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {WirelessPowerTower} from './wirelessPowerTower';
 import {SuperMagneticRing} from '../../components/cat5/superMagneticRing';

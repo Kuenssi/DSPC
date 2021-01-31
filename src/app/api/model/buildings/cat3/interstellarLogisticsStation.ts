@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, INTERSTELLAR_LOGISTICS_STATION} from '../../../util/names';
+import {ASSEMBLER, INTERSTELLAR_LOGISTICS_STATION} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {PlanetaryLogisticsStation} from '../cat2/planetaryLogisticsStation';
 import {TitaniumAlloy} from '../../components/cat2/titaniumAlloy';

@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, ASSEMBLING_MACHINE_MK_1} from '../../../util/names';
+import {ASSEMBLER, ASSEMBLING_MACHINE_MK_1} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {IronIngot} from '../../components/cat1/ironIngot';
 import {Gear} from '../../components/cat4/gear';

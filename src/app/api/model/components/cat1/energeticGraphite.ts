@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ENERGETIC_GRAPHITE, SMELTER} from '../../../util/names';
+import {ENERGETIC_GRAPHITE, SMELTER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {CoalOre} from '../../baseComponents/coalOre';
 

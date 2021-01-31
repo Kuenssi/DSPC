@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, MINI_PARTICLE_COLLIDER} from '../../../util/names';
+import {ASSEMBLER, MINI_PARTICLE_COLLIDER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {TitaniumAlloy} from '../../components/cat2/titaniumAlloy';
 import {FrameMaterial} from '../../components/cat5/frameMaterial';

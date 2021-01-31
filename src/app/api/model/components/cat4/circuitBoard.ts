@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, CIRCUIT_BOARD} from '../../../util/names';
+import {ASSEMBLER, CIRCUIT_BOARD} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {IronIngot} from '../cat1/ironIngot';
 import {CopperIngot} from '../cat1/copperIngot';

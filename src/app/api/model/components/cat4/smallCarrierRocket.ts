@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SMALL_CARRIER_ROCKET} from '../../../util/names';
+import {ASSEMBLER, SMALL_CARRIER_ROCKET} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {DysonSphereComponent} from '../cat5/dysonSphereComponent';
 import {DeuteronFuelRod} from '../cat2/deuteronFuelRod';

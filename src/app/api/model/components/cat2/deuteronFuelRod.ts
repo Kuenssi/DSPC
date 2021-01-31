@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, DEUTERON_FUEL_ROD} from '../../../util/names';
+import {ASSEMBLER, DEUTERON_FUEL_ROD} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {TitaniumAlloy} from './titaniumAlloy';
 import {Deuterium} from '../cat4/deuterium';

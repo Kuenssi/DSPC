@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {IRON_INGOT, SMELTER} from '../../../util/names';
+import {IRON_INGOT, SMELTER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {IronOre} from '../../baseComponents/ironOre';
 

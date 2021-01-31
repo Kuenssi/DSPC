@@ -1,5 +1,5 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SPACE_WARPER} from '../../../util/names';
+import {ASSEMBLER, SPACE_WARPER} from '../../../util/constants/names';
 import {Input} from '../../../util/input';
 import {GravitonLens} from '../cat4/gravitonLens';
 
