@@ -5,7 +5,7 @@ export const ASSEMBLER = 'Assembler';
 export const RESEARCH_FACILITY = 'Research Facility';
 
 // -----------------------------------------------------------------------------------------
-// Ores
+// Base Components
 // -----------------------------------------------------------------------------------------
 export const IRON_ORE = 'Iron Ore';
 export const COPPER_ORE = 'Copper Ore';
@@ -18,6 +18,11 @@ export const KIMBERLITE_ORE = 'Kimberlite Ore';
 export const UNIPOLAR_MAGNET = 'Unipolar magnet';
 export const OPTICAL_GRATING_CRYSTAL = 'Optical Grating Crystal';
 export const SPINIFORM_STALGMITE_CRYSTAL = 'Spiniform Stalagmite Crystal';
+export const RAW_OIL = 'Raw Oil';
+export const WATER = 'Water';
+export const FIRE_ICE = 'Fire ice';
+export const HYDROGEN = 'Hydrogen';
+export const REFINED_OIL = 'Refined Oil';
 
 // -----------------------------------------------------------------------------------------
 // Veins
@@ -32,7 +37,9 @@ export const KIMBERLITE_VEIN = 'Kimberlite Veins';
 export const UNIPOLAR_MAGNET_VEIN = 'Unipolar magnet Veins';
 export const OPTICAL_GRATING_CRYSTAL_VEIN = 'Optical Grating Crystal Veins';
 export const SPINIFORM_STALGMITE_CRYSTAL_VEIN = 'Spiniform Stalagmite Crystal Veins';
-
+export const FRACTAL_SILICON_VEIN = 'Fractal Silicon Veins';
+export const RAW_OIL_SPOT = 'Raw Oil Spots';
+export const FIRE_ICE_VEIN = 'Fire ice veins';
 
 // -----------------------------------------------------------------------------------------
 // Components
@@ -68,8 +75,6 @@ export const A_CRYSTAL_SILICON = '(Recipe) Crystal silicon (advanced)';
 export const TITANIUM_GLASS = 'Titanium Glass';
 export const PRISMA = 'Prisma';
 export const A_DIAMOND = '(Recipe) Diamond (advanced)';
-export const DEUTERIUM_FRACTIONATION = '(Recipe) Deuterium fractionation';
-export const O_ORGANIC_CRYSTAL = '(Recipe) Organic Crystal (original)';
 export const TITANIUM_CRYSTAL = 'Titanium Crystal';
 export const THRUSTER = 'Thruster';
 export const REINFORCED_THRUSTER = 'Reinforced Thruster';

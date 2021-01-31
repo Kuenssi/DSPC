@@ -4,6 +4,8 @@ import {AllBuildings} from './api/model/buildings/allBuildings';
 import {AllComponents} from './api/model/components/allComponents';
 import {ASSEMBLER} from './api/util/constants/names';
 import {Input} from './api/util/input';
+import {Result} from './api/util/result';
+import {Tree} from './api/util/tree';
 
 @Component({
   selector: 'app-root',
@@ -72,7 +74,7 @@ export class AppComponent {
     result.neededBuildingsDisplay = neededBuildings;
 
     if (result.item.neededMachine === ASSEMBLER) {
-      // needed for the correct number of assembler
+      // needed for the correct number of assembler display
       result.neededBuildingsDisplay = wantedOutput / (currentOutput * this.currentAssemblerMultiplier);
     }
 
@@ -129,22 +131,5 @@ export class AppComponent {
     }
 
     return result;
-  }
-}
-
-export class Result {
-  item!: Item;
-  neededBuildingsDisplay!: number;
-  neededBuildingsCalculation!: number;
-  iteration!: number;
-}
-
-export class Tree {
-  step!: number;
-  results!: Result[];
-
-  constructor(step: number) {
-    this.step = step;
-    this.results = [];
   }
 }
