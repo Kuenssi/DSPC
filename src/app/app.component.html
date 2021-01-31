@@ -12,7 +12,7 @@
       <div fxFlex>
         <div fxLayoutAlign="center">Select your current research progress (Veins utilization):</div>
         <div fxLayoutAlign="center">
-          <mat-radio-group [(ngModel)]="fasterMiningPercent" fxLayout="column">
+          <mat-radio-group [(ngModel)]="fasterMiningPercent" fxLayout="column" (change)="startCalc()">
             <mat-radio-button [value]="0">Stufe 0</mat-radio-button>
             <mat-radio-button [value]="10">Stufe 1</mat-radio-button>
             <mat-radio-button [value]="20">Stufe 2</mat-radio-button>
@@ -27,7 +27,7 @@
       <div fxFlex>
         <div fxLayoutAlign="center">Select Assembler level</div>
         <div fxLayoutAlign="center">
-          <mat-radio-group [(ngModel)]="currentMultiplier" fxLayout="column">
+          <mat-radio-group [(ngModel)]="currentMultiplier" fxLayout="column" (change)="startCalc()">
             <mat-radio-button [value]="0.75">Mk. 1</mat-radio-button>
             <mat-radio-button [value]="1">Mk. 2</mat-radio-button>
             <mat-radio-button [value]="1.5">Mk. 3</mat-radio-button>
@@ -38,7 +38,7 @@
       <div fxFlex>
         <div fxLayoutAlign="center">Insert your wanted Output:</div>
         <div fxLayoutAlign="center">
-          <input fxFlex="10" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
+          <input fxFlex="20" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
           <span>/min</span>
         </div>
       </div>

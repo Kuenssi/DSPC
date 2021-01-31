@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {Item} from './api/model/item';
-import {ElectricMotor} from './api/model/components/cat3/electricMotor';
 import {AllBuildings} from './api/model/buildings/allBuildings';
 import {AllComponents} from './api/model/components/allComponents';
 
@@ -17,7 +16,7 @@ export class AppComponent {
   displayList: Result[];
 
   currentMultiplier: number;
-  wantedItem: Item;
+  wantedItem!: Item;
   wantedOutput: number;
 
   fasterMiningPercent: number;
@@ -26,7 +25,6 @@ export class AppComponent {
   allComponents = new AllComponents();
 
   constructor() {
-    this.wantedItem = new ElectricMotor();
     this.currentMultiplier = 0.75;
     this.wantedOutput = 60;
     this.fasterMiningPercent = 0;
@@ -44,9 +42,12 @@ export class AppComponent {
 
   setOutput(e: any) {
     this.wantedOutput = Number(e.target.value);
+    this.startCalc();
   }
 
   startCalc() {
+    if (!this.wantedItem) return;
+
     this.results = [];
     this.calc(this.wantedItem, this.wantedOutput, this.currentMultiplier);
     this.evaluateDisplayList();
