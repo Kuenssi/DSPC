@@ -1,8 +1,3 @@
-.navbar {
-  height: 5vh;
-  max-height: 5vh;
-}
-
 .versionNumber {
   color: #555;
   font-size: large;
@@ -10,8 +5,4 @@
 
 .titleString {
   color: white;
-}
-
-.card {
-  background: burlywood;
 }

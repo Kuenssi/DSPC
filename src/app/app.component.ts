@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {Item} from './api/model/item';
-import {ASSEMBLER_MK_1_MULTI, ASSEMBLER_MK_2_MULTI, ASSEMBLER_MK_3_MULTI, BASE_MINING} from './api/util/numbers';
 import {ElectricMotor} from './api/model/components/cat3/electricMotor';
 import {AllBuildings} from './api/model/buildings/allBuildings';
 import {AllComponents} from './api/model/components/allComponents';
@@ -21,10 +20,6 @@ export class AppComponent {
   wantedItem: Item;
   wantedOutput: number;
 
-  mark1: boolean;
-  mark2: boolean;
-  mark3: boolean;
-
   fasterMiningPercent: number;
 
   allBuildings = new AllBuildings();
@@ -32,10 +27,7 @@ export class AppComponent {
 
   constructor() {
     this.wantedItem = new ElectricMotor();
-    this.mark1 = true;
-    this.mark2 = false;
-    this.mark3 = false;
-    this.currentMultiplier = ASSEMBLER_MK_1_MULTI;
+    this.currentMultiplier = 0.75;
     this.wantedOutput = 60;
     this.fasterMiningPercent = 0;
     this.results = [];
@@ -45,16 +37,9 @@ export class AppComponent {
   //////////
   // Ui Actions
   //////////
-  toggleAction(value: boolean): boolean {
-    this.mark1 = false;
-    this.mark2 = false;
-    this.mark3 = false;
-
-    return value;
-  }
-
   selectItem(item: Item) {
     this.wantedItem = item;
+    this.startCalc();
   }
 
   setOutput(e: any) {
@@ -63,7 +48,6 @@ export class AppComponent {
 
   startCalc() {
     this.results = [];
-    this.evaluateAssemblerLevel();
     this.calc(this.wantedItem, this.wantedOutput, this.currentMultiplier);
     this.evaluateDisplayList();
   }
@@ -74,8 +58,7 @@ export class AppComponent {
 
   calc(wantedItem: Item, wantedOutput: number, currentMultiplier: number) {
     if (wantedItem.baseItem) {
-      let currentOutput = BASE_MINING * (1 + (this.fasterMiningPercent / 100));
-      console.log(currentOutput);
+      let currentOutput = 30 * (1 + (this.fasterMiningPercent / 100));
 
       let result = new Result();
       result.item = wantedItem;
@@ -105,20 +88,6 @@ export class AppComponent {
   evaluateDisplayList() {
     // merge every single shit and so on
     this.displayList = this.results;
-  }
-
-  private evaluateAssemblerLevel() {
-    if (this.mark1) {
-      this.currentMultiplier = ASSEMBLER_MK_1_MULTI;
-    }
-
-    if (this.mark2) {
-      this.currentMultiplier = ASSEMBLER_MK_2_MULTI;
-    }
-
-    if (this.mark3) {
-      this.currentMultiplier = ASSEMBLER_MK_3_MULTI;
-    }
   }
 }
 
