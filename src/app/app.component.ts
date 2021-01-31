@@ -52,7 +52,7 @@ export class AppComponent {
     if (!this.wantedItem) return;
 
     this.results = [];
-    this.calc(this.wantedItem, this.wantedOutput, this.currentAssemblerMultiplier, 0);
+    this.calc(this.wantedItem, this.wantedOutput, 0);
     this.evaluateDisplayTree();
   }
 
@@ -60,22 +60,28 @@ export class AppComponent {
   // Logic
   //////////
 
-  calc(wantedItem: Item, wantedOutput: number, currentMultiplier: number, iteration: number) {
-    let currentOutput = this.calculateCurrentOutput(wantedItem, currentMultiplier);
+  calc(wantedItem: Item, wantedOutput: number, iteration: number) {
+    let currentOutput = this.calculateCurrentOutput(wantedItem);
 
     let result = new Result();
     result.item = wantedItem;
-    result.neededBuildings = wantedOutput / currentOutput;
     result.iteration = iteration;
+
+    let neededBuildings = wantedOutput / currentOutput;
+    result.neededBuildingsCalculation = neededBuildings;
+    result.neededBuildingsDisplay = neededBuildings;
+
+    if (result.item.neededMachine === ASSEMBLER) {
+      // needed for the correct number of assembler
+      result.neededBuildingsDisplay = wantedOutput / (currentOutput * this.currentAssemblerMultiplier);
+    }
 
     this.results.push(result);
 
     for (let input of wantedItem.inputs) {
-      let prevMatOutput = result.neededBuildings * this.calculateNeededInput(wantedItem, input);
+      let prevMatOutput = result.neededBuildingsCalculation * this.calculateNeededInput(wantedItem, input);
 
-      //prevMatOutput = result.neededBuildings * calculate Input needed per minute for one assembler or something like that
-
-      this.calc(input.item, prevMatOutput, currentMultiplier, iteration + 1);
+      this.calc(input.item, prevMatOutput, iteration + 1);
     }
   }
 
@@ -87,17 +93,13 @@ export class AppComponent {
     return result;
   }
 
-  calculateCurrentOutput(wantedItem: Item, currentMultiplier: number): number {
+  calculateCurrentOutput(wantedItem: Item): number {
     let result;
 
     if (wantedItem.baseItem) {
       result = 30 * (1 + (this.fasterMiningPercent / 100));
     } else {
       result = (60 / wantedItem.processingTime) * wantedItem.outputAmount;
-    }
-
-    if (wantedItem.neededMachine === ASSEMBLER) {
-      result *= currentMultiplier;
     }
 
     return result;
@@ -132,7 +134,8 @@ export class AppComponent {
 
 export class Result {
   item!: Item;
-  neededBuildings!: number;
+  neededBuildingsDisplay!: number;
+  neededBuildingsCalculation!: number;
   iteration!: number;
 }
 
