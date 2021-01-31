@@ -14,7 +14,6 @@ export class AppComponent {
   version = '0.0.1';
 
   results: Result[];
-  displayList: Result[];
 
   currentAssemblerMultiplier: number;
   wantedItem!: Item;
@@ -25,12 +24,14 @@ export class AppComponent {
   allBuildings = new AllBuildings();
   allComponents = new AllComponents();
 
+  resultTree: Tree[];
+
   constructor() {
     this.currentAssemblerMultiplier = 0.75;
     this.wantedOutput = 60;
     this.fasterMiningPercent = 0;
     this.results = [];
-    this.displayList = [];
+    this.resultTree = [];
   }
 
   //////////
@@ -92,9 +93,32 @@ export class AppComponent {
   }
 
   evaluateDisplayList() {
-    // merge every single shit and so on
-    this.displayList = this.results;
-    console.log(this.results);
+    this.resultTree = [];
+
+    let maxSteps = this.evaluateMaxSteps();
+
+    for (let i = 0; i < maxSteps + 1; i++) {
+      this.resultTree.push(new Tree(i));
+    }
+
+    for (let entry of this.results) {
+      console.log(this.resultTree[entry.iteration]);
+      this.resultTree[entry.iteration].results.push(entry);
+    }
+
+    console.log(this.resultTree);
+  }
+
+  evaluateMaxSteps(): number {
+    let result = 1;
+
+    for (let entry of this.results) {
+      if (entry.iteration > result) {
+        result = entry.iteration;
+      }
+    }
+
+    return result;
   }
 }
 
@@ -102,4 +126,14 @@ export class Result {
   item!: Item;
   neededBuildings!: number;
   iteration!: number;
+}
+
+export class Tree {
+  step!: number;
+  results!: Result[];
+
+  constructor(step: number) {
+    this.step = step;
+    this.results = [];
+  }
 }

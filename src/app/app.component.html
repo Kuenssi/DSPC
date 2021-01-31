@@ -102,16 +102,36 @@
 
     <mat-divider></mat-divider>
 
-    <div fxLayout="column" fxLayoutGap="1%">
+    <div fxLayoutAlign="center" fxLayout="column">
       <div fxLayoutAlign="center"> The holy calculation area (in fugly)</div>
-      <div *ngFor="let element of displayList">
-        <mat-card class="mat-card" fxFlex="30">
-          <mat-card-title>{{element.item.name}}</mat-card-title>
-          <mat-card-content>
-            {{element.neededBuildings.toFixed(2)}}x {{element.item.veinType || element.item.neededMachine}}
-          </mat-card-content>
-        </mat-card>
-      </div>
+      <table class="table table-hover">
+        <thead>
+        <tr fxLayout="row" fxFlex fxLayoutGap="0.25rem">
+          <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex="5" fxLayoutAlign="center">
+            <span>Step</span>
+          </th>
+          <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex fxLayoutAlign="center">
+            <span>Tree</span>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let entry of resultTree" fxLayoutGap="0.25rem">
+          <td fxFlex="5" fxLayoutAlign="center">
+            <span>{{entry.step}}</span>
+          </td>
+          <td *ngFor="let result of entry.results" fxFlex fxLayoutGap="0.25rem" fxLayoutAlign="center">
+            <mat-divider></mat-divider>
+            <mat-card class="mat-card" fxFlex="30" fxLayoutGap="1%">
+              <mat-card-title>{{result.item.name}}</mat-card-title>
+              <mat-card-content>
+                {{result.neededBuildings.toFixed(2)}}x {{result.item.veinType || result.item.neededMachine}}
+              </mat-card-content>
+            </mat-card>
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
