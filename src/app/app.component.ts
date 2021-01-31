@@ -12,7 +12,7 @@ import {Input} from './api/util/input';
 })
 export class AppComponent {
   title = 'Dyson Sphere Program Calculator';
-  version = '0.0.1';
+  version = '0.0.0';
 
   results: Result[];
 
@@ -53,7 +53,7 @@ export class AppComponent {
 
     this.results = [];
     this.calc(this.wantedItem, this.wantedOutput, this.currentAssemblerMultiplier, 0);
-    this.evaluateDisplayList();
+    this.evaluateDisplayTree();
   }
 
   //////////
@@ -103,7 +103,7 @@ export class AppComponent {
     return result;
   }
 
-  evaluateDisplayList() {
+  evaluateDisplayTree() {
     this.resultTree = [];
 
     let maxSteps = this.evaluateMaxSteps();
@@ -113,11 +113,8 @@ export class AppComponent {
     }
 
     for (let entry of this.results) {
-      console.log(this.resultTree[entry.iteration]);
       this.resultTree[entry.iteration].results.push(entry);
     }
-
-    console.log(this.resultTree);
   }
 
   evaluateMaxSteps(): number {
