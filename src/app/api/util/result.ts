@@ -5,4 +5,5 @@ export class Result {
   neededBuildingsDisplay!: number;
   neededBuildingsCalculation!: number;
   iteration!: number;
+  generatedOutput!: number;
 }

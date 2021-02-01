@@ -27,7 +27,6 @@ import {ReinforcedThruster} from './cat3/reinforcedThruster';
 import {StrangeMatter} from './cat3/strangeMatter';
 import {Gear} from './cat4/gear';
 import {ElectromagneticTurbine} from './cat4/electromagneticTurbine';
-import {SiliconOre} from '../baseComponents/siliconOre';
 import {CircuitBoard} from './cat4/circuitBoard';
 import {GravitonLens} from './cat4/gravitonLens';
 import {SulfuricAcid} from './cat4/sulfuricAcid';
@@ -63,6 +62,7 @@ import {GravityMatrix} from './cat7/gravityMatrix';
 import {Foundation} from './cat7/foundation';
 import {EnergeticGraphite} from './cat1/energeticGraphite';
 import {AdvancedGraphene} from '../multipleOutputs/advancedGraphene';
+import {SiliconOreFromStone} from './cat4/SiliconOreFromStone';
 
 export class AllComponents {
   components: ComponentRow[];
@@ -107,7 +107,7 @@ export class AllComponents {
       new ComponentRow([
         new Gear(),
         new ElectromagneticTurbine(),
-        new SiliconOre(),
+        new SiliconOreFromStone(),
         new CircuitBoard(),
         new GravitonLens(),
         new SulfuricAcid(),

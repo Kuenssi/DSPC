@@ -92,6 +92,7 @@ export const CARBON_NANOTUBE = 'Carbon nanotube';
 export const LOGISTICS_DRONE = 'Logistics drone';
 export const LOGISTICS_VESSEL = 'Logistics vessel';
 export const SMALL_CARRIER_ROCKET = 'Small carrier rocket';
+export const SILICON_ORE_FROM_STONE = 'Silicon ore from stone';
 
 // 5
 export const PLASMA_EXCITER = 'Plasma exciter';

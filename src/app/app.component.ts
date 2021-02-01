@@ -78,6 +78,8 @@ export class AppComponent {
       result.neededBuildingsDisplay = wantedOutput / (currentOutput * this.currentAssemblerMultiplier);
     }
 
+    result.generatedOutput = wantedOutput;
+
     this.results.push(result);
 
     for (let input of wantedItem.inputs) {

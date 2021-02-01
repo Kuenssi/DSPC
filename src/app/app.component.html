@@ -124,6 +124,7 @@
             <mat-divider></mat-divider>
             <mat-card class="mat-card" fxFlex="30" fxLayoutGap="1%">
               <mat-card-title>{{result.item.name}}</mat-card-title>
+              <mat-card-subtitle>Generated Output: {{result.generatedOutput}}/min</mat-card-subtitle>
               <mat-card-content>
                 {{result.neededBuildingsDisplay.toFixed(2)}}x {{result.item.veinType || result.item.neededMachine}}
               </mat-card-content>
