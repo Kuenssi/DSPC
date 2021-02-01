@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Item} from './api/model/item';
 import {AllBuildings} from './api/model/buildings/allBuildings';
 import {AllComponents} from './api/model/components/allComponents';
-import {ASSEMBLER} from './api/util/constants/names';
+import {ASSEMBLER, WATER} from './api/util/constants/names';
 import {Input} from './api/util/input';
 import {Result} from './api/util/result';
 import {Tree} from './api/util/tree';
@@ -99,7 +99,11 @@ export class AppComponent {
     let result;
 
     if (wantedItem.baseItem) {
-      result = 30 * (1 + (this.fasterMiningPercent / 100));
+      if (wantedItem.name === WATER) {
+        result = 60;
+      } else {
+        result = 30 * (1 + (this.fasterMiningPercent / 100));
+      }
     } else {
       result = (60 / wantedItem.processingTime) * wantedItem.outputAmount;
     }

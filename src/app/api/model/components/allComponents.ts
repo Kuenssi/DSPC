@@ -63,8 +63,6 @@ import {GravityMatrix} from './cat7/gravityMatrix';
 import {Foundation} from './cat7/foundation';
 import {EnergeticGraphite} from './cat1/energeticGraphite';
 import {AdvancedGraphene} from '../multipleOutputs/advancedGraphene';
-import {XrayCracking} from '../multipleOutputs/xrayCracking';
-import {PlasmaRefining} from '../multipleOutputs/plasmaRefining';
 
 export class AllComponents {
   components: ComponentRow[];
@@ -79,7 +77,6 @@ export class AllComponents {
         new TitaniumIngot(),
         new Stone(),
         new EnergeticGraphite(),
-        new PlasmaRefining(),
         new Plastic(),
         new Graphene()
       ], 1),
@@ -90,7 +87,6 @@ export class AllComponents {
         new TitaniumAlloy(),
         new Glass(),
         new Diamond(),
-        new XrayCracking(),
         new OrganicCrystal(),
         new AdvancedGraphene(),
         new HydrogenFuelRod(),
