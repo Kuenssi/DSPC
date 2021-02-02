@@ -42,6 +42,13 @@
           <span>/min</span>
         </div>
       </div>
+
+      <div *ngIf="results.length > 0" fxFlex>
+        <div fxLayoutAlign="center">Needed Buildings:</div>
+        <div *ngFor="let overview of overviewMap.keys()">
+          <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMap.get(overview))}}</div>
+        </div>
+      </div>
     </div>
 
     <mat-divider></mat-divider>

@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Item} from './api/model/item';
 import {AllBuildings} from './api/model/buildings/allBuildings';
 import {AllComponents} from './api/model/components/allComponents';
-import {ASSEMBLER, WATER} from './api/util/constants/names';
+import {ASSEMBLER, RAW_OIL, WATER} from './api/util/constants/names';
 import {Input} from './api/util/input';
 import {Result} from './api/util/result';
 import {Tree} from './api/util/tree';
@@ -15,6 +15,8 @@ import {Tree} from './api/util/tree';
 export class AppComponent {
   title = 'Dyson Sphere Program Calculator';
   version = '0.0.0';
+
+  overviewMap: Map<string, number> = new Map<string, number>();
 
   results: Result[];
 
@@ -29,12 +31,15 @@ export class AppComponent {
 
   resultTree: Tree[];
 
+  overviews: OverviewElement[];
+
   constructor() {
     this.currentAssemblerMultiplier = 0.75;
     this.wantedOutput = 60;
     this.fasterMiningPercent = 0;
     this.results = [];
     this.resultTree = [];
+    this.overviews = [];
   }
 
   //////////
@@ -55,12 +60,36 @@ export class AppComponent {
 
     this.results = [];
     this.calc(this.wantedItem, this.wantedOutput, 0);
+    this.evaluateAllOverviewElements();
     this.evaluateDisplayTree();
   }
 
   //////////
   // Logic
   //////////
+
+  evaluateAllOverviewElements() {
+    //Clear old stuff
+    this.overviewMap = new Map<string, number>();
+    this.overviews = [];
+
+    let key;
+    //Get values to map
+    for (let result of this.results) {
+      if (result.item.baseItem) {
+        key = result.item.veinType;
+      } else {
+        key = result.item.neededMachine;
+      }
+
+      if (this.overviewMap.has(key)) {
+        // @ts-ignore -> ignores the probability of undefined by this.overviewMap.get
+        this.overviewMap.set(key, this.overviewMap.get(key) + result.neededBuildingsDisplay);
+      } else {
+        this.overviewMap = this.overviewMap.set(key, result.neededBuildingsDisplay);
+      }
+    }
+  }
 
   calc(wantedItem: Item, wantedOutput: number, iteration: number) {
     let currentOutput = this.calculateCurrentOutput(wantedItem);
@@ -101,7 +130,7 @@ export class AppComponent {
     let result;
 
     if (wantedItem.baseItem) {
-      if (wantedItem.name === WATER) {
+      if (wantedItem.name === WATER || wantedItem.name === RAW_OIL) {
         result = 60;
       } else {
         result = 30 * (1 + (this.fasterMiningPercent / 100));
@@ -137,5 +166,22 @@ export class AppComponent {
     }
 
     return result;
+  }
+
+  setFixedStrings(number: number | undefined): string {
+    if (number) {
+      return number.toFixed(2);
+    }
+    return '';
+  }
+}
+
+export class OverviewElement {
+  facilityName!: string;
+  neededAmount!: number;
+
+  constructor(facilityName: string, neededAmount: number) {
+    this.facilityName = facilityName;
+    this.neededAmount = neededAmount;
   }
 }
