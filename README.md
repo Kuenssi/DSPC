@@ -2,7 +2,6 @@ A little calculator for Dyson Sphere Program.
 
 Future Additions/Fix planned:
 
-- Overview over how much smelter/assembler... needed
 - Rework ResultTree
 - Icons for Buildings/Components
 - Tool Tips while hovering over icons (as soon as those are added)
