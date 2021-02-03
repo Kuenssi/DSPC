@@ -31,15 +31,12 @@ export class AppComponent {
 
   resultTree: Tree[];
 
-  overviews: OverviewElement[];
-
   constructor() {
     this.currentAssemblerMultiplier = 0.75;
     this.wantedOutput = 60;
     this.fasterMiningPercent = 0;
     this.results = [];
     this.resultTree = [];
-    this.overviews = [];
   }
 
   //////////
@@ -71,7 +68,6 @@ export class AppComponent {
   evaluateAllOverviewElements() {
     //Clear old stuff
     this.overviewMap = new Map<string, number>();
-    this.overviews = [];
 
     let key;
     //Get values to map
@@ -173,15 +169,5 @@ export class AppComponent {
       return number.toFixed(2);
     }
     return '';
-  }
-}
-
-export class OverviewElement {
-  facilityName!: string;
-  neededAmount!: number;
-
-  constructor(facilityName: string, neededAmount: number) {
-    this.facilityName = facilityName;
-    this.neededAmount = neededAmount;
   }
 }
