@@ -6,4 +6,5 @@ export class Result {
   neededBuildingsCalculation!: number;
   iteration!: number;
   generatedOutput!: number;
+  nextItem!: Item;
 }

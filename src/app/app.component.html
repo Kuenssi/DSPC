@@ -1,4 +1,4 @@
-<div fxLayout="row" fxFlex>
+<div fxLayout="row" fxFlex xmlns:svg="">
   <div fxLayout="column" fxFlex>
     <div>
       <div fxLayoutAlign="center">{{title}}</div>
@@ -44,8 +44,8 @@
       </div>
 
       <div *ngIf="results.length > 0" fxFlex>
-        <div fxLayoutAlign="center">Needed Buildings:</div>
-        <div *ngFor="let overview of overviewMap.keys()">
+        <div fxLayoutAlign="center">Needed Buildings/Veins:</div>
+        <div *ngFor="let overview of overviewMapKeys">
           <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMap.get(overview))}}</div>
         </div>
       </div>
@@ -112,36 +112,41 @@
     <mat-divider></mat-divider>
 
     <div fxLayoutAlign="center" fxLayout="column">
-      <div fxLayoutAlign="center"> The holy calculation area (in fugly)</div>
-      <table class="table table-hover">
-        <thead>
-        <tr fxLayout="row" fxFlex fxLayoutGap="0.25rem">
-          <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex="5" fxLayoutAlign="center">
-            <span>Step</span>
-          </th>
-          <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex fxLayoutAlign="center">
-            <span>Tree</span>
-          </th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let entry of resultTree" fxLayoutGap="0.25rem">
-          <td fxFlex="5" fxLayoutAlign="center">
-            <span>{{entry.step}}</span>
-          </td>
-          <td *ngFor="let result of entry.results" fxFlex fxLayoutGap="0.25rem" fxLayoutAlign="center">
-            <mat-divider></mat-divider>
-            <mat-card class="mat-card" fxFlex="30" fxLayoutGap="1%">
-              <mat-card-title>{{result.item.name}}</mat-card-title>
-              <mat-card-subtitle>Generated Output: {{result.generatedOutput}}/min</mat-card-subtitle>
-              <mat-card-content>
-                {{result.neededBuildingsDisplay.toFixed(2)}}x {{result.item.veinType || result.item.neededMachine}}
-              </mat-card-content>
-            </mat-card>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+      <mat-card class="mat-card" fxFlex>
+        <ngx-graph class="chart-container" [view]="[1700, 700]" [links]="links" [nodes]="nodes" layout="dagreCluster" [draggingEnabled]="false">
+          <ng-template #nodeTemplate let-node>
+            <svg:g class="node">
+              <svg:rect
+                [attr.width]="node.dimension.width"
+                [attr.height]="node.dimension.height * 1.5"
+                [attr.fill]="node.data.color"
+              />
+              <svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="node.dimension.height / 2">
+                {{node.label}}
+              </svg:text>
+              <svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="node.dimension.height">
+                {{node.subLabel}}
+              </svg:text>
+            </svg:g>
+          </ng-template>
+
+          <ng-template #linkTemplate let-link>
+            <svg:g class="edge">
+              <svg:path class="line" stroke-width="2" marker-end="url(#arrow)"></svg:path>
+              <svg:text class="edge-label" text-anchor="middle">
+                <textPath
+                  class="text-path"
+                  [attr.href]="'#' + link.id"
+                  [style.dominant-baseline]="link.dominantBaseline"
+                  startOffset="50%"
+                >
+                  {{link.label}}
+                </textPath>
+              </svg:text>
+            </svg:g>
+          </ng-template>
+        </ngx-graph>
+      </mat-card>
     </div>
   </div>
 </div>
