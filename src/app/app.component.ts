@@ -8,7 +8,6 @@ import {Result} from './api/util/result';
 import {Tree} from './api/util/tree';
 import {Node} from './api/util/graph/Node';
 import {Link} from './api/util/graph/link';
-import {of} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -32,21 +31,19 @@ export class AppComponent {
   allBuildings = new AllBuildings();
   allComponents = new AllComponents();
 
-  resultTree: Tree[];
-
   nodes: Node[];
   links: Link[];
 
-  overviewMapKeys!: IterableIterator<string>;
+  overviewMapKeys!: string[];
 
   constructor() {
     this.currentAssemblerMultiplier = 0.75;
     this.wantedOutput = 60;
     this.fasterMiningPercent = 0;
     this.results = [];
-    this.resultTree = [];
     this.nodes = [];
     this.links = [];
+    this.overviewMapKeys = [];
   }
 
   //////////
@@ -68,45 +65,16 @@ export class AppComponent {
     this.results = [];
     this.calc(this.wantedItem, this.wantedOutput, 0, new Item());
     this.evaluateAllOverviewElements();
-    this.evaluateDisplayTree();
-    this.triggerManualUpdateForGraph();
+    this.builtResultGraph();
   }
 
   //////////
   // Logic
   //////////
-
-  triggerManualUpdateForGraph() {
-    this.nodes = [];
-    this.links = [];
-
-    let alreadyAdded = false;
-    for (let result of this.results) {
-      for (let node of this.nodes) {
-        if (result.item.name === node.id) {
-          alreadyAdded = true;
-        }
-      }
-
-      if (!alreadyAdded) {
-        this.nodes.push(new Node(result.item.name, result.item.name));
-      }
-    }
-
-    for (let i = 0; i < this.results.length; i++) {
-      let result = this.results[i];
-      if (result.nextItem.name) {
-        this.links.push(new Link('l' + i, result.item.name, result.nextItem.name, result.generatedOutput + '/min'));
-      }
-    }
-
-    this.nodes = [...this.nodes];
-    this.links = [...this.links];
-  }
-
   evaluateAllOverviewElements() {
     //Clear old stuff
     this.overviewMap = new Map<string, number>();
+    this.overviewMapKeys = [];
 
     let key;
     //Get values to map
@@ -125,7 +93,42 @@ export class AppComponent {
       }
     }
 
-    this.overviewMapKeys = this.overviewMap.keys();
+    for (let overviewKey of this.overviewMap.keys()) {
+      this.overviewMapKeys.push(overviewKey);
+    }
+  }
+
+  builtResultGraph() {
+    this.nodes = [];
+    this.links = [];
+
+    let alreadyAdded = false;
+    for (let result of this.results) {
+      alreadyAdded = false;
+      for (let node of this.nodes) {
+        if (result.item.name === node.id) {
+          alreadyAdded = true;
+        }
+      }
+
+      if (!alreadyAdded) {
+        if (result.item.baseItem) {
+          this.nodes.push(new Node(result.item.name, result.item.name, result.neededBuildingsDisplay.toFixed(2) + 'x ' + result.item.veinType));
+        } else {
+          this.nodes.push(new Node(result.item.name, result.item.name, result.neededBuildingsDisplay.toFixed(2) + 'x ' + result.item.neededMachine));
+        }
+      }
+    }
+
+    for (let i = 0; i < this.results.length; i++) {
+      let result = this.results[i];
+      if (result.nextItem.name) {
+        this.links.push(new Link('l' + i, result.item.name, result.nextItem.name, result.generatedOutput + '/min'));
+      }
+    }
+
+    this.nodes = [...this.nodes];
+    this.links = [...this.links];
   }
 
   calc(wantedItem: Item, wantedOutput: number, iteration: number, nextItem: Item) {
@@ -175,32 +178,6 @@ export class AppComponent {
       }
     } else {
       result = (60 / wantedItem.processingTime) * wantedItem.outputAmount;
-    }
-
-    return result;
-  }
-
-  evaluateDisplayTree() {
-    this.resultTree = [];
-
-    let maxSteps = this.evaluateMaxSteps();
-
-    for (let i = 0; i < maxSteps + 1; i++) {
-      this.resultTree.push(new Tree(i));
-    }
-
-    for (let entry of this.results) {
-      this.resultTree[entry.iteration].results.push(entry);
-    }
-  }
-
-  evaluateMaxSteps(): number {
-    let result = 1;
-
-    for (let entry of this.results) {
-      if (entry.iteration > result) {
-        result = entry.iteration;
-      }
     }
 
     return result;

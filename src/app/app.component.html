@@ -113,36 +113,41 @@
 
     <div fxLayoutAlign="center" fxLayout="column">
       <div fxLayoutAlign="center"> The holy calculation area (in fugly)</div>
-      <ngx-graph class="chart-container" [view]="[1000, 500]" [links]="links" [nodes]="nodes" layout="dagreCluster">
-        <ng-template #nodeTemplate let-node>
-          <svg:g class="node">
-            <svg:rect
-              [attr.width]="node.dimension.width"
-              [attr.height]="node.dimension.height"
-              [attr.fill]="node.data.color"
-            />
-            <svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="node.dimension.height / 2">
-              {{node.label}}
-            </svg:text>
-          </svg:g>
-        </ng-template>
+      <mat-card class="mat-card" fxFlex>
+        <ngx-graph class="chart-container" [view]="[1700, 700]" [links]="links" [nodes]="nodes" layout="dagreCluster" [draggingEnabled]="false">
+          <ng-template #nodeTemplate let-node>
+            <svg:g class="node">
+              <svg:rect
+                [attr.width]="node.dimension.width"
+                [attr.height]="node.dimension.height * 1.5"
+                [attr.fill]="node.data.color"
+              />
+              <svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="node.dimension.height / 2">
+                {{node.label}}
+              </svg:text>
+              <svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="node.dimension.height">
+                {{node.subLabel}}
+              </svg:text>
+            </svg:g>
+          </ng-template>
 
-        <ng-template #linkTemplate let-link>
-          <svg:g class="edge">
-            <svg:path class="line" stroke-width="2" marker-end="url(#arrow)"></svg:path>
-            <svg:text class="edge-label" text-anchor="middle">
-              <textPath
-                class="text-path"
-                [attr.href]="'#' + link.id"
-                [style.dominant-baseline]="link.dominantBaseline"
-                startOffset="50%"
-              >
-                {{link.label}}
-              </textPath>
-            </svg:text>
-          </svg:g>
-        </ng-template>
-      </ngx-graph>
+          <ng-template #linkTemplate let-link>
+            <svg:g class="edge">
+              <svg:path class="line" stroke-width="2" marker-end="url(#arrow)"></svg:path>
+              <svg:text class="edge-label" text-anchor="middle">
+                <textPath
+                  class="text-path"
+                  [attr.href]="'#' + link.id"
+                  [style.dominant-baseline]="link.dominantBaseline"
+                  startOffset="50%"
+                >
+                  {{link.label}}
+                </textPath>
+              </svg:text>
+            </svg:g>
+          </ng-template>
+        </ngx-graph>
+      </mat-card>
     </div>
   </div>
 </div>
