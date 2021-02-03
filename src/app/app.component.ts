@@ -6,6 +6,9 @@ import {ASSEMBLER, RAW_OIL, WATER} from './api/util/constants/names';
 import {Input} from './api/util/input';
 import {Result} from './api/util/result';
 import {Tree} from './api/util/tree';
+import {Node} from './api/util/graph/Node';
+import {Link} from './api/util/graph/link';
+import {of} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -31,12 +34,19 @@ export class AppComponent {
 
   resultTree: Tree[];
 
+  nodes: Node[];
+  links: Link[];
+
+  overviewMapKeys!: IterableIterator<string>;
+
   constructor() {
     this.currentAssemblerMultiplier = 0.75;
     this.wantedOutput = 60;
     this.fasterMiningPercent = 0;
     this.results = [];
     this.resultTree = [];
+    this.nodes = [];
+    this.links = [];
   }
 
   //////////
@@ -56,14 +66,43 @@ export class AppComponent {
     if (!this.wantedItem) return;
 
     this.results = [];
-    this.calc(this.wantedItem, this.wantedOutput, 0);
+    this.calc(this.wantedItem, this.wantedOutput, 0, new Item());
     this.evaluateAllOverviewElements();
     this.evaluateDisplayTree();
+    this.triggerManualUpdateForGraph();
   }
 
   //////////
   // Logic
   //////////
+
+  triggerManualUpdateForGraph() {
+    this.nodes = [];
+    this.links = [];
+
+    let alreadyAdded = false;
+    for (let result of this.results) {
+      for (let node of this.nodes) {
+        if (result.item.name === node.id) {
+          alreadyAdded = true;
+        }
+      }
+
+      if (!alreadyAdded) {
+        this.nodes.push(new Node(result.item.name, result.item.name));
+      }
+    }
+
+    for (let i = 0; i < this.results.length; i++) {
+      let result = this.results[i];
+      if (result.nextItem.name) {
+        this.links.push(new Link('l' + i, result.item.name, result.nextItem.name, result.generatedOutput + '/min'));
+      }
+    }
+
+    this.nodes = [...this.nodes];
+    this.links = [...this.links];
+  }
 
   evaluateAllOverviewElements() {
     //Clear old stuff
@@ -85,9 +124,11 @@ export class AppComponent {
         this.overviewMap = this.overviewMap.set(key, result.neededBuildingsDisplay);
       }
     }
+
+    this.overviewMapKeys = this.overviewMap.keys();
   }
 
-  calc(wantedItem: Item, wantedOutput: number, iteration: number) {
+  calc(wantedItem: Item, wantedOutput: number, iteration: number, nextItem: Item) {
     let currentOutput = this.calculateCurrentOutput(wantedItem);
 
     let result = new Result();
@@ -97,6 +138,7 @@ export class AppComponent {
     let neededBuildings = wantedOutput / currentOutput;
     result.neededBuildingsCalculation = neededBuildings;
     result.neededBuildingsDisplay = neededBuildings;
+    result.nextItem = nextItem;
 
     if (result.item.neededMachine === ASSEMBLER) {
       // needed for the correct number of assembler display
@@ -110,7 +152,7 @@ export class AppComponent {
     for (let input of wantedItem.inputs) {
       let prevMatOutput = result.neededBuildingsCalculation * this.calculateNeededInput(wantedItem, input);
 
-      this.calc(input.item, prevMatOutput, iteration + 1);
+      this.calc(input.item, prevMatOutput, iteration + 1, wantedItem);
     }
   }
 

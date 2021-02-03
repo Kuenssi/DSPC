@@ -9,6 +9,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
+import {NgxGraphModule} from '@swimlane/ngx-graph';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatRadioModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxGraphModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
