@@ -35,6 +35,7 @@ import {Fractionator} from './cat4/fractionator';
 import {ChemicalPlant} from './cat4/chemicalPlant';
 import {MatrixLab} from './cat4/matrixLab';
 import {OrbitCollector} from './cat4/orbitCollector';
+import {Placeholder} from '../../util/placeholder';
 
 export class AllBuildings {
   buildings: BuildingRow[];
@@ -52,7 +53,9 @@ export class AllBuildings {
         new Accumulator(),
         new RayReceiver(),
         new MiniFusionPowerStation(),
-        new Accumulator()
+        new Accumulator(),
+        new Placeholder(),
+        new Placeholder(),
       ], 1),
       new BuildingRow([
         new ConveyorBeltOne(),
@@ -64,7 +67,9 @@ export class AllBuildings {
         new StorageTank(),
         new EmRailEjector(),
         new PlanetaryLogisticsStation(),
-        new MiniParticleCollider()
+        new MiniParticleCollider(),
+        new Placeholder(),
+        new Placeholder(),
       ], 2),
       new BuildingRow([
         new SorterOne(),
@@ -75,17 +80,24 @@ export class AllBuildings {
         new OilExtractor(),
         new OilRefinery(),
         new VerticalLaunchingSilo(),
-        new InterstellarLogisticsStation()
+        new InterstellarLogisticsStation(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
       ], 3),
       new BuildingRow([
         new AssemblerOne(),
         new AssemblerTwo(),
         new AssemblerThree(),
         new Smelter(),
+        new Placeholder(),
         new Fractionator(),
         new ChemicalPlant(),
         new MatrixLab(),
-        new OrbitCollector()
+        new OrbitCollector(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
       ], 4),
     );
   }

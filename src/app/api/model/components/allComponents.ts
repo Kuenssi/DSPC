@@ -63,6 +63,7 @@ import {Foundation} from './cat7/foundation';
 import {EnergeticGraphite} from './cat1/energeticGraphite';
 import {AdvancedGraphene} from '../multipleOutputs/advancedGraphene';
 import {SiliconOreFromStone} from './cat4/SiliconOreFromStone';
+import {Placeholder} from '../../util/placeholder';
 
 export class AllComponents {
   components: ComponentRow[];
@@ -77,8 +78,12 @@ export class AllComponents {
         new TitaniumIngot(),
         new Stone(),
         new EnergeticGraphite(),
+        new Placeholder(),
         new Plastic(),
-        new Graphene()
+        new Graphene(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
       ], 1),
       new ComponentRow([
         new Magnet(),
@@ -87,10 +92,12 @@ export class AllComponents {
         new TitaniumAlloy(),
         new Glass(),
         new Diamond(),
+        new Placeholder(),
         new OrganicCrystal(),
         new AdvancedGraphene(),
         new HydrogenFuelRod(),
-        new DeuteronFuelRod()
+        new DeuteronFuelRod(),
+        new Placeholder(),
       ], 2),
       new ComponentRow([
         new Steel(),
@@ -99,6 +106,8 @@ export class AllComponents {
         new TitaniumGlass(),
         new Prisma(),
         new AdvancedDiamond(),
+        new Placeholder(),
+        new Placeholder(),
         new TitaniumCrystal(),
         new Thruster(),
         new ReinforcedThruster(),
@@ -126,6 +135,7 @@ export class AllComponents {
         new CasimirCrystal(),
         new ParticleContainer(),
         new SpaceWarper(),
+        new Placeholder(),
         new AdvancedCarbonNanotube(),
         new SolarSail(),
         new FrameMaterial(),
@@ -138,7 +148,12 @@ export class AllComponents {
         new QuantumChip(),
         new AdvancedCasimirCrystal(),
         new AdvancedParticleContainer(),
-        new AdvancedSpaceWarper()
+        new AdvancedSpaceWarper(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
       ], 6),
       new ComponentRow([
         new ElectromagneticMatrix(),
@@ -146,6 +161,12 @@ export class AllComponents {
         new StructureMatrix(),
         new InformationMatrix(),
         new GravityMatrix(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
+        new Placeholder(),
         new Foundation()
       ], 7),
     );

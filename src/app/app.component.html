@@ -67,12 +67,13 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let cat of allBuildings.buildings">
+          <tr *ngFor="let cat of allBuildings.buildings" fxLayoutGap="0.25rem">
             <td fxFlex="5" fxLayoutAlign="center">
               <span>{{cat.categoryNumber}}</span>
             </td>
-            <td *ngFor="let building of cat.buildings" fxFlex>
-              <button fxFlex (click)="selectItem(building)">{{building.name}}</button>
+            <td *ngFor="let building of cat.buildings" fxFlex fxLayoutGap="0.25rem">
+              <button *ngIf="building.name" fxFlex (click)="selectItem(building)">{{building.name}}</button>
+              <button *ngIf="!building.name" fxFlex></button>
             </td>
           </tr>
           </tbody>
@@ -82,9 +83,9 @@
       <mat-divider></mat-divider>
 
       <div fxLayoutAlign="center">
-        <table class="table table-hover">
+        <table class="mat-table">
           <thead>
-          <tr fxLayout="row" fxFlex fxLayoutGap="0.25rem">
+          <tr fxLayout="row" fxFlex>
             <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex="5" fxLayoutAlign="center">
               <span>Cat</span>
             </th>
@@ -99,7 +100,8 @@
               <span>{{cat.categoryNumber}}</span>
             </td>
             <td *ngFor="let component of cat.components" fxFlex fxLayoutGap="0.25rem">
-              <button fxFlex (click)="selectItem(component)">{{component.name}}</button>
+              <button *ngIf="component.name" fxFlex (click)="selectItem(component)">{{component.name}}</button>
+              <button *ngIf="!component.name" fxFlex></button>
             </td>
           </tr>
           </tbody>
