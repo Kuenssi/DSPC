@@ -113,7 +113,7 @@
 
     <div fxLayoutAlign="center" fxLayout="column">
       <mat-card class="mat-card" fxFlex>
-        <ngx-graph class="chart-container" [view]="[1700, 700]" [links]="links" [nodes]="nodes" layout="dagreCluster" [draggingEnabled]="false">
+        <ngx-graph [autoZoom]="true" [autoCenter]="true" class="chart-container" [view]="[1700, 900]" [links]="links" [nodes]="nodes" layout="dagreCluster" [draggingEnabled]="false">
           <ng-template #nodeTemplate let-node>
             <svg:g class="node">
               <svg:rect
