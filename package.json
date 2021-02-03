@@ -6,6 +6,7 @@
     "go": "ng serve --open",
     "start": "node server.js",
     "build": "ng build --prod",
+    "pages": "ng deploy --base-href=https://kuenssi.github.io/DSPC/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
