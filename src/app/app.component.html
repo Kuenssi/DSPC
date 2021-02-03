@@ -44,7 +44,7 @@
       </div>
 
       <div *ngIf="results.length > 0" fxFlex>
-        <div fxLayoutAlign="center">Needed Buildings:</div>
+        <div fxLayoutAlign="center">Needed Buildings/Veins:</div>
         <div *ngFor="let overview of overviewMapKeys">
           <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMap.get(overview))}}</div>
         </div>
@@ -112,7 +112,6 @@
     <mat-divider></mat-divider>
 
     <div fxLayoutAlign="center" fxLayout="column">
-      <div fxLayoutAlign="center"> The holy calculation area (in fugly)</div>
       <mat-card class="mat-card" fxFlex>
         <ngx-graph class="chart-container" [view]="[1700, 700]" [links]="links" [nodes]="nodes" layout="dagreCluster" [draggingEnabled]="false">
           <ng-template #nodeTemplate let-node>
