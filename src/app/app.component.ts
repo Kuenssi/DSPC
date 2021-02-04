@@ -2,7 +2,7 @@ import {Component, HostListener} from '@angular/core';
 import {Item} from './api/model/item';
 import {AllBuildings} from './api/model/buildings/allBuildings';
 import {AllComponents} from './api/model/components/allComponents';
-import {ASSEMBLER, RAW_OIL, WATER} from './api/util/constants/names';
+import {ASSEMBLER, MINING_MACHINE, RAW_OIL, WATER} from './api/util/constants/names';
 import {Input} from './api/util/input';
 import {Result} from './api/util/result';
 import {Node} from './api/util/graph/Node';
@@ -113,21 +113,32 @@ export class AppComponent {
         if (this.overviewMapBase.has(key)) {
           this.overviewMapBase.set(key, <number>this.overviewMapBase.get(key) + result.neededBuildingsDisplay);
         } else {
-          this.overviewMapBase = this.overviewMapBase.set(key, result.neededBuildingsDisplay);
+          this.overviewMapBase.set(key, result.neededBuildingsDisplay);
         }
       } else {
         key = result.item.neededMachine;
         if (this.overviewMapBuilding.has(key)) {
           this.overviewMapBuilding.set(key, <number>this.overviewMapBuilding.get(key) + result.neededBuildingsDisplay);
         } else {
-          this.overviewMapBuilding = this.overviewMapBuilding.set(key, result.neededBuildingsDisplay);
+          this.overviewMapBuilding.set(key, result.neededBuildingsDisplay);
         }
       }
     }
 
+    let neededMiningMachines = 0;
+
     for (let overviewKey of this.overviewMapBase.keys()) {
       this.overviewMapBaseKeys.push(overviewKey);
+      if (overviewKey.indexOf('Veins') > 0) {
+        if (<number>this.overviewMapBase.get(overviewKey) <= 5) {
+          neededMiningMachines += 1;
+        } else {
+          neededMiningMachines += <number>this.overviewMapBase.get(overviewKey) / 5;
+        }
+      }
     }
+
+    this.overviewMapBuilding.set('~' + MINING_MACHINE, neededMiningMachines);
 
     for (let overviewKey of this.overviewMapBuilding.keys()) {
       this.overviewMapBuildingKeys.push(overviewKey);
