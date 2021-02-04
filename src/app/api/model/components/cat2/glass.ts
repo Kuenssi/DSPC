@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {GLASS, SMELTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {GLASS, SMELTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {StoneOre} from '../../baseComponents/stoneOre';
 
 export class Glass extends Item {

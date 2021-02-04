@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {CHEMICAL_PLANT, ORGANIC_CRYSTAL} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {CHEMICAL_PLANT, ORGANIC_CRYSTAL} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Plastic} from '../cat1/plastic';
 import {RefinedOil} from '../../baseComponents/refinedOil';
 import {Water} from '../../baseComponents/water';

@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, RAY_RECEIVER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, RAY_RECEIVER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Steel} from '../../components/cat3/steel';
 import {HighPuritySilicon} from '../../components/cat1/highPuritySilicon';
 import {PhotonCombiner} from '../../components/cat6/photonCombiner';

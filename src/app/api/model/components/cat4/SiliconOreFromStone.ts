@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {SILICON_ORE_FROM_STONE, SMELTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {SILICON_ORE_FROM_STONE, SMELTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {StoneOre} from '../../baseComponents/stoneOre';
 
 export class SiliconOreFromStone extends Item {

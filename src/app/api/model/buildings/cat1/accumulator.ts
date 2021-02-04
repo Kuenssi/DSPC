@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ACCUMULATOR, ASSEMBLER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ACCUMULATOR, ASSEMBLER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {CrystalSilicon} from '../../components/cat2/crystalSilicon';
 import {SuperMagneticRing} from '../../components/cat5/superMagneticRing';
 import {IronIngot} from '../../components/cat1/ironIngot';

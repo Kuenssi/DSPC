@@ -1,4 +1,4 @@
-import {Item} from '../model/item';
+import {Item} from '../item';
 
 export class Input {
   item!: Item;

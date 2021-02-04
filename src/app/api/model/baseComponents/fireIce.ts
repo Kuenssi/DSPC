@@ -1,5 +1,5 @@
 import {Item} from '../item';
-import {FIRE_ICE, FIRE_ICE_VEIN, MINING_MACHINE} from '../../util/constants/names';
+import {FIRE_ICE, FIRE_ICE_VEIN, MINING_MACHINE} from '../util/constants/names';
 
 export class FireIce extends Item {
   name = FIRE_ICE;

@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SOLAR_PANEL} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, SOLAR_PANEL} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {CopperIngot} from '../../components/cat1/copperIngot';
 import {HighPuritySilicon} from '../../components/cat1/highPuritySilicon';
 import {CircuitBoard} from '../../components/cat4/circuitBoard';

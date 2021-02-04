@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, THERMAL_POWER_STATION} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, THERMAL_POWER_STATION} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronIngot} from '../../components/cat1/ironIngot';
 import {Stone} from '../../components/cat1/stone';
 import {Gear} from '../../components/cat4/gear';

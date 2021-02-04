@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, VERTICAL_LAUNCHING_SILO} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, VERTICAL_LAUNCHING_SILO} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {TitaniumAlloy} from '../../components/cat2/titaniumAlloy';
 import {FrameMaterial} from '../../components/cat5/frameMaterial';
 import {GravitonLens} from '../../components/cat4/gravitonLens';

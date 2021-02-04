@@ -1,6 +1,6 @@
 import {Item} from '../item';
-import {HYDROGEN, OIL_REFINERY} from '../../util/constants/names';
-import {Input} from '../../util/input';
+import {HYDROGEN, OIL_REFINERY} from '../util/constants/names';
+import {Input} from '../util/input';
 import {RawOil} from './rawOil';
 
 export class Hydrogen extends Item {

@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {INFORMATION_MATRIX, RESEARCH_FACILITY} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {INFORMATION_MATRIX, RESEARCH_FACILITY} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Processor} from '../cat5/processor';
 import {ParticleBroadband} from '../cat5/particleBroadband';
 

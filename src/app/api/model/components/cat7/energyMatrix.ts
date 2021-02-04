@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ENERGY_MATRIX, RESEARCH_FACILITY} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ENERGY_MATRIX, RESEARCH_FACILITY} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {EnergeticGraphite} from '../cat1/energeticGraphite';
 import {Hydrogen} from '../../baseComponents/hydrogen';
 

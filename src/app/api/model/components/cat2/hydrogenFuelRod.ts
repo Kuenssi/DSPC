@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, HYDROGEN_FUEL_ROD} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, HYDROGEN_FUEL_ROD} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {TitaniumIngot} from '../cat1/titaniumIngot';
 import {Hydrogen} from '../../baseComponents/hydrogen';
 

@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, STORAGE_TANK} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, STORAGE_TANK} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Glass} from '../../components/cat2/glass';
 import {Stone} from '../../components/cat1/stone';
 import {IronIngot} from '../../components/cat1/ironIngot';

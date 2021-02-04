@@ -3,7 +3,7 @@ import {
   MINING_MACHINE,
   SPINIFORM_STALGMITE_CRYSTAL,
   SPINIFORM_STALGMITE_CRYSTAL_VEIN
-} from '../../util/constants/names';
+} from '../util/constants/names';
 
 export class SpiniformStalagmiteCrystal extends Item {
   name = SPINIFORM_STALGMITE_CRYSTAL;

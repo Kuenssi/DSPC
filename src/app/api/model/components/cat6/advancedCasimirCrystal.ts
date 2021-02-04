@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {A_CASIMIR_CRYSTAL, ASSEMBLER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {A_CASIMIR_CRYSTAL, ASSEMBLER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {OpticalGratingCrystal} from '../../baseComponents/opticalGratingCrystal';
 import {Graphene} from '../cat1/graphene';
 import {Hydrogen} from '../../baseComponents/hydrogen';

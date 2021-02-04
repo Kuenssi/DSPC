@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {SMELTER, STEEL} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {SMELTER, STEEL} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronIngot} from '../cat1/ironIngot';
 
 export class Steel extends Item {

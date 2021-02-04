@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, MAGNETIC_COIL} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, MAGNETIC_COIL} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Magnet} from './magnet';
 import {CopperIngot} from '../cat1/copperIngot';
 

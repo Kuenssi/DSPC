@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, ELECTRIC_MOTOR} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, ELECTRIC_MOTOR} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronIngot} from '../cat1/ironIngot';
 import {Gear} from '../cat4/gear';
 import {MagneticCoil} from '../cat2/magneticCoil';

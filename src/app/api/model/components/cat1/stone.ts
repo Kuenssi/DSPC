@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {SMELTER, STONE} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {SMELTER, STONE} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {StoneOre} from '../../baseComponents/stoneOre';
 
 export class Stone extends Item {

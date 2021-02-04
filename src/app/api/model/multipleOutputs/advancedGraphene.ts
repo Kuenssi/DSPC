@@ -1,6 +1,6 @@
 import {Item} from '../item';
-import {A_GRAPHENE, CHEMICAL_PLANT} from '../../util/constants/names';
-import {Input} from '../../util/input';
+import {A_GRAPHENE, CHEMICAL_PLANT} from '../util/constants/names';
+import {Input} from '../util/input';
 import {FireIce} from '../baseComponents/fireIce';
 
 export class AdvancedGraphene extends Item {

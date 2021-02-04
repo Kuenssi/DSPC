@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {SMELTER, TITANIUM_ALLOY} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {SMELTER, TITANIUM_ALLOY} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {TitaniumIngot} from '../cat1/titaniumIngot';
 import {Steel} from '../cat3/steel';
 import {SulfuricAcid} from '../cat4/sulfuricAcid';

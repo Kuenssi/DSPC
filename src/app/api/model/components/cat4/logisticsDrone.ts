@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, LOGISTICS_DRONE} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, LOGISTICS_DRONE} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronIngot} from '../cat1/ironIngot';
 import {Processor} from '../cat5/processor';
 import {Thruster} from '../cat3/thruster';

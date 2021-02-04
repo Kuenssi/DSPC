@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {SMELTER, TITANIUM_INGOT} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {SMELTER, TITANIUM_INGOT} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {TitaniumOre} from '../../baseComponents/titaniumOre';
 
 export class TitaniumIngot extends Item {

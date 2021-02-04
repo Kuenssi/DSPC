@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, WIND_TURBINE} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, WIND_TURBINE} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronIngot} from '../../components/cat1/ironIngot';
 import {Gear} from '../../components/cat4/gear';
 import {MagneticCoil} from '../../components/cat2/magneticCoil';

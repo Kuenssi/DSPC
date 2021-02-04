@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SMELTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, SMELTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronIngot} from '../../components/cat1/ironIngot';
 import {Stone} from '../../components/cat1/stone';
 import {CircuitBoard} from '../../components/cat4/circuitBoard';

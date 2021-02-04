@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {A_SPACE_WARPER, ASSEMBLER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {A_SPACE_WARPER, ASSEMBLER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {GravityMatrix} from '../cat7/gravityMatrix';
 
 export class AdvancedSpaceWarper extends Item {

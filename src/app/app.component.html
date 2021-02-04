@@ -3,7 +3,8 @@
     <div>
       <div fxLayoutAlign="center">{{title}}</div>
       <div fxLayoutAlign="center">v.{{version}}</div>
-      <a target="_blank" rel="noopener noreferrer" fxLayoutAlign="center" href="https://github.com/Kuenssi/DSPC">source</a>
+      <a target="_blank" rel="noopener noreferrer" fxLayoutAlign="center"
+         href="https://github.com/Kuenssi/DSPC">source</a>
     </div>
 
     <mat-divider></mat-divider>
@@ -14,13 +15,13 @@
         <div fxLayoutAlign="center">Veins utilization level:</div>
         <div fxLayoutAlign="center">
           <mat-radio-group [(ngModel)]="fasterMiningPercent" fxLayout="column" (change)="startCalc()">
-            <mat-radio-button [value]="0">Stufe 0</mat-radio-button>
-            <mat-radio-button [value]="10">Stufe 1</mat-radio-button>
-            <mat-radio-button [value]="20">Stufe 2</mat-radio-button>
-            <mat-radio-button [value]="30">Stufe 3</mat-radio-button>
-            <mat-radio-button [value]="40">Stufe 4</mat-radio-button>
-            <mat-radio-button [value]="50">Stufe 5</mat-radio-button>
-            <mat-radio-button [value]="60">Stufe 6</mat-radio-button>
+            <mat-radio-button [value]="0">Level 0</mat-radio-button>
+            <mat-radio-button [value]="10">Level 1</mat-radio-button>
+            <mat-radio-button [value]="20">Level 2</mat-radio-button>
+            <mat-radio-button [value]="30">Level 3</mat-radio-button>
+            <mat-radio-button [value]="40">Level 4</mat-radio-button>
+            <mat-radio-button [value]="50">Level 5</mat-radio-button>
+            <mat-radio-button [value]="60">Level 6</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>
@@ -61,101 +62,17 @@
 
     <mat-divider></mat-divider>
 
-    <div>
-      <div fxLayoutAlign="center">
-        <table class="mat-table">
-          <thead>
-          <tr fxLayout="row" fxFlex>
-            <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex="5" fxLayoutAlign="center">
-              <span>Cat</span>
-            </th>
-            <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex fxLayoutAlign="center">
-              <span>Buildings</span>
-            </th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let cat of allBuildings.buildings" fxLayoutGap="0.25rem">
-            <td fxFlex="5" fxLayoutAlign="center">
-              <span>{{cat.categoryNumber}}</span>
-            </td>
-            <td *ngFor="let building of cat.buildings" fxFlex fxLayoutGap="0.25rem">
-              <button *ngIf="building.name" fxFlex (click)="selectItem(building)">{{building.name}}</button>
-              <button *ngIf="!building.name" fxFlex></button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <mat-divider></mat-divider>
-
-      <div fxLayoutAlign="center">
-        <table class="mat-table">
-          <thead>
-          <tr fxLayout="row" fxFlex>
-            <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex="5" fxLayoutAlign="center">
-              <span>Cat</span>
-            </th>
-            <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex fxLayoutAlign="center">
-              <span>Components</span>
-            </th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let cat of allComponents.components" fxLayoutGap="0.25rem">
-            <td fxFlex="5" fxLayoutAlign="center">
-              <span>{{cat.categoryNumber}}</span>
-            </td>
-            <td *ngFor="let component of cat.components" fxFlex fxLayoutGap="0.25rem">
-              <button *ngIf="component.name" fxFlex (click)="selectItem(component)">{{component.name}}</button>
-              <button *ngIf="!component.name" fxFlex></button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <app-selection-table [table]="allBuildings" (selectCallback)="selectItem($event)"></app-selection-table>
 
     <mat-divider></mat-divider>
 
-    <button *ngIf="scrolled" (click)="topFunction()" class="toTopButton" title="Beam me up">Top</button>
+    <app-selection-table [table]="allComponents" (selectCallback)="selectItem($event)"></app-selection-table>
 
-    <div fxLayoutAlign="center">
-      <ngx-graph [autoZoom]="true" [autoCenter]="true" class="chart-container" [view]="[1650, 800]"
-                 [links]="links" [nodes]="nodes" layout="dagreCluster" [draggingEnabled]="false">
-        <ng-template #nodeTemplate let-node>
-          <svg:g class="node">
-            <svg:rect
-              [attr.width]="node.dimension.width"
-              [attr.height]="node.dimension.height * 1.5"
-              [attr.fill]="node.data.color"
-            />
-            <svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="node.dimension.height / 2">
-              {{node.label}}
-            </svg:text>
-            <svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="node.dimension.height">
-              {{node.subLabel}}
-            </svg:text>
-          </svg:g>
-        </ng-template>
+    <mat-divider></mat-divider>
 
-        <ng-template #linkTemplate let-link>
-          <svg:g class="edge">
-            <svg:path class="line" stroke-width="2" marker-end="url(#arrow)"></svg:path>
-            <svg:text class="edge-label" text-anchor="middle">
-              <textPath
-                class="text-path"
-                [attr.href]="'#' + link.id"
-                [style.dominant-baseline]="link.dominantBaseline"
-                startOffset="50%"
-              >
-                {{link.label + '/min'}}
-              </textPath>
-            </svg:text>
-          </svg:g>
-        </ng-template>
-      </ngx-graph>
-    </div>
+    <app-result-graph [results]="results"></app-result-graph>
+
+    <app-to-top-button></app-to-top-button>
+
   </div>
 </div>

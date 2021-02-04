@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, PLASMA_EXCITER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, PLASMA_EXCITER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {MagneticCoil} from '../cat2/magneticCoil';
 import {Prisma} from '../cat3/prisma';
 

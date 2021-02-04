@@ -1,6 +1,6 @@
 import {Item} from '../item';
-import {OIL_REFINERY, REFINED_OIL} from '../../util/constants/names';
-import {Input} from '../../util/input';
+import {OIL_REFINERY, REFINED_OIL} from '../util/constants/names';
+import {Input} from '../util/input';
 import {RawOil} from './rawOil';
 
 export class RefinedOil extends Item {

@@ -1,5 +1,5 @@
 import {Item} from '../item';
-import {KIMBERLITE_ORE, KIMBERLITE_VEIN, MINING_MACHINE} from '../../util/constants/names';
+import {KIMBERLITE_ORE, KIMBERLITE_VEIN, MINING_MACHINE} from '../util/constants/names';
 
 export class KimberliteOre extends Item {
   name = KIMBERLITE_ORE;

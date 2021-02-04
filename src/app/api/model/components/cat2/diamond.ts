@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {DIAMOND, SMELTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {DIAMOND, SMELTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {EnergeticGraphite} from '../cat1/energeticGraphite';
 
 export class Diamond extends Item {

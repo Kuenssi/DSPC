@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SORTER_MK_3} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, SORTER_MK_3} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {SorterTwo} from './sorterTwo';
 import {ElectromagneticTurbine} from '../../components/cat4/electromagneticTurbine';
 

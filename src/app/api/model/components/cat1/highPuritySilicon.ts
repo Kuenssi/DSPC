@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {HIGH_PURITY_SILICON, SMELTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {HIGH_PURITY_SILICON, SMELTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {SiliconOre} from '../../baseComponents/siliconOre';
 
 export class HighPuritySilicon extends Item {

@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, TESLA_TOWER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, TESLA_TOWER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {MagneticCoil} from '../../components/cat2/magneticCoil';
 import {IronIngot} from '../../components/cat1/ironIngot';
 

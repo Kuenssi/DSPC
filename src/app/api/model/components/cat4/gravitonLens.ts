@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, GRAVITON_LENS} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, GRAVITON_LENS} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Diamond} from '../cat2/diamond';
 import {StrangeMatter} from '../cat3/strangeMatter';
 

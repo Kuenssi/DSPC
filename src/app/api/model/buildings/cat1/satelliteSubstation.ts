@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, SATELLITE_SUBSTATION} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, SATELLITE_SUBSTATION} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {WirelessPowerTower} from './wirelessPowerTower';
 import {SuperMagneticRing} from '../../components/cat5/superMagneticRing';
 import {FrameMaterial} from '../../components/cat5/frameMaterial';

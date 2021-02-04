@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {A_PHOTON_COMBINER, ASSEMBLER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {A_PHOTON_COMBINER, ASSEMBLER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {CircuitBoard} from '../cat4/circuitBoard';
 import {OpticalGratingCrystal} from '../../baseComponents/opticalGratingCrystal';
 

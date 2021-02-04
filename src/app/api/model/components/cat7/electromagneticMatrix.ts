@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ELECTROMAGNETIC_MATRIX, RESEARCH_FACILITY} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ELECTROMAGNETIC_MATRIX, RESEARCH_FACILITY} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {MagneticCoil} from '../cat2/magneticCoil';
 import {CircuitBoard} from '../cat4/circuitBoard';
 

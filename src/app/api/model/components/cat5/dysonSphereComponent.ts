@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, DYSON_SPHERE_COMPONENT} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, DYSON_SPHERE_COMPONENT} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {FrameMaterial} from './frameMaterial';
 import {SolarSail} from './solarSail';
 import {Processor} from './processor';

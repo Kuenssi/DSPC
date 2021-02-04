@@ -1,5 +1,5 @@
 import {Item} from '../item';
-import {MINING_MACHINE, STONE_ORE, STONE_VEIN} from '../../util/constants/names';
+import {MINING_MACHINE, STONE_ORE, STONE_VEIN} from '../util/constants/names';
 
 export class StoneOre extends Item {
   name = STONE_ORE;

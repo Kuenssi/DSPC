@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {CRYSTAL_SILICON, SMELTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {CRYSTAL_SILICON, SMELTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {HighPuritySilicon} from '../cat1/highPuritySilicon';
 
 export class CrystalSilicon extends Item {

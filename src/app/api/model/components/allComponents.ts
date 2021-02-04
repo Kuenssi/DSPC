@@ -1,4 +1,3 @@
-import {Item} from '../item';
 import {IronIngot} from './cat1/ironIngot';
 import {CopperIngot} from './cat1/copperIngot';
 import {HighPuritySilicon} from './cat1/highPuritySilicon';
@@ -63,15 +62,15 @@ import {Foundation} from './cat7/foundation';
 import {EnergeticGraphite} from './cat1/energeticGraphite';
 import {AdvancedGraphene} from '../multipleOutputs/advancedGraphene';
 import {SiliconOreFromStone} from './cat4/SiliconOreFromStone';
-import {Placeholder} from '../../util/placeholder';
+import {Placeholder} from '../util/placeholder';
+import {SingleRow} from '../util/table/singleRow';
+import {AllRows} from '../util/table/allRows';
 
-export class AllComponents {
-  components: ComponentRow[];
-
+export class AllComponents extends AllRows {
   constructor() {
-    this.components = [];
-    this.components.push(
-      new ComponentRow([
+    super();
+    this.singleRows.push(
+      new SingleRow([
         new IronIngot(),
         new CopperIngot(),
         new HighPuritySilicon(),
@@ -85,7 +84,7 @@ export class AllComponents {
         new Placeholder(),
         new Placeholder(),
       ], 1),
-      new ComponentRow([
+      new SingleRow([
         new Magnet(),
         new MagneticCoil(),
         new CrystalSilicon(),
@@ -99,7 +98,7 @@ export class AllComponents {
         new DeuteronFuelRod(),
         new Placeholder(),
       ], 2),
-      new ComponentRow([
+      new SingleRow([
         new Steel(),
         new ElectricMotor(),
         new AdvancedCrystalSilicon(),
@@ -113,7 +112,7 @@ export class AllComponents {
         new ReinforcedThruster(),
         new StrangeMatter()
       ], 3),
-      new ComponentRow([
+      new SingleRow([
         new Gear(),
         new ElectromagneticTurbine(),
         new SiliconOreFromStone(),
@@ -127,7 +126,7 @@ export class AllComponents {
         new LogisticsVessel(),
         new SmallCarrierRocket()
       ], 4),
-      new ComponentRow([
+      new SingleRow([
         new PlasmaExciter(),
         new SuperMagneticRing(),
         new ParticleBroadband(),
@@ -141,7 +140,7 @@ export class AllComponents {
         new FrameMaterial(),
         new DysonSphereComponent()
       ], 5),
-      new ComponentRow([
+      new SingleRow([
         new PhotonCombiner(),
         new AdvancedPhotonCombiner(),
         new MicrocrystallineComponent(),
@@ -155,7 +154,7 @@ export class AllComponents {
         new Placeholder(),
         new Placeholder(),
       ], 6),
-      new ComponentRow([
+      new SingleRow([
         new ElectromagneticMatrix(),
         new EnergyMatrix(),
         new StructureMatrix(),
@@ -170,15 +169,5 @@ export class AllComponents {
         new Foundation()
       ], 7),
     );
-  }
-}
-
-export class ComponentRow {
-  components!: Item[];
-  categoryNumber!: number;
-
-  constructor(components: Item[], cat: number) {
-    this.components = components;
-    this.categoryNumber = cat;
   }
 }

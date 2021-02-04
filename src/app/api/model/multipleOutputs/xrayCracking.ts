@@ -1,6 +1,6 @@
 import {Item} from '../item';
-import {OIL_REFINERY, X_RAY_CRACKING} from '../../util/constants/names';
-import {Input} from '../../util/input';
+import {OIL_REFINERY, X_RAY_CRACKING} from '../util/constants/names';
+import {Input} from '../util/input';
 import {RefinedOil} from '../baseComponents/refinedOil';
 import {Hydrogen} from '../baseComponents/hydrogen';
 

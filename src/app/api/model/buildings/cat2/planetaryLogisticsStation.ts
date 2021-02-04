@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, PLANETARY_LOGISTICS_STATION} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, PLANETARY_LOGISTICS_STATION} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Steel} from '../../components/cat3/steel';
 import {TitaniumIngot} from '../../components/cat1/titaniumIngot';
 import {Processor} from '../../components/cat5/processor';

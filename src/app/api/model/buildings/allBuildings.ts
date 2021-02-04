@@ -1,4 +1,3 @@
-import {Item} from '../item';
 import {TeslaTower} from './cat1/teslaTower';
 import {WirelessPowerTower} from './cat1/wirelessPowerTower';
 import {SatelliteSubstation} from './cat1/satelliteSubstation';
@@ -35,15 +34,15 @@ import {Fractionator} from './cat4/fractionator';
 import {ChemicalPlant} from './cat4/chemicalPlant';
 import {MatrixLab} from './cat4/matrixLab';
 import {OrbitCollector} from './cat4/orbitCollector';
-import {Placeholder} from '../../util/placeholder';
+import {Placeholder} from '../util/placeholder';
+import {SingleRow} from '../util/table/singleRow';
+import {AllRows} from '../util/table/allRows';
 
-export class AllBuildings {
-  buildings: BuildingRow[];
-
+export class AllBuildings extends AllRows {
   constructor() {
-    this.buildings = [];
-    this.buildings.push(
-      new BuildingRow([
+    super();
+    this.singleRows.push(
+      new SingleRow([
         new TeslaTower(),
         new WirelessPowerTower(),
         new SatelliteSubstation(),
@@ -57,7 +56,7 @@ export class AllBuildings {
         new Placeholder(),
         new Placeholder(),
       ], 1),
-      new BuildingRow([
+      new SingleRow([
         new ConveyorBeltOne(),
         new ConveyorBeltTwo(),
         new ConveyorBeltThree(),
@@ -71,7 +70,7 @@ export class AllBuildings {
         new Placeholder(),
         new Placeholder(),
       ], 2),
-      new BuildingRow([
+      new SingleRow([
         new SorterOne(),
         new SorterTwo(),
         new SorterThree(),
@@ -85,7 +84,7 @@ export class AllBuildings {
         new Placeholder(),
         new Placeholder(),
       ], 3),
-      new BuildingRow([
+      new SingleRow([
         new AssemblerOne(),
         new AssemblerTwo(),
         new AssemblerThree(),
@@ -100,15 +99,5 @@ export class AllBuildings {
         new Placeholder(),
       ], 4),
     );
-  }
-}
-
-export class BuildingRow {
-  buildings!: Item[];
-  categoryNumber!: number;
-
-  constructor(buildings: Item[], cat: number) {
-    this.buildings = buildings;
-    this.categoryNumber = cat;
   }
 }

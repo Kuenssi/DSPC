@@ -1,5 +1,5 @@
 import {Item} from '../item';
-import {MINING_MACHINE, SILICON_ORE, SILICON_VEIN} from '../../util/constants/names';
+import {MINING_MACHINE, SILICON_ORE, SILICON_VEIN} from '../util/constants/names';
 
 export class SiliconOre extends Item {
   name = SILICON_ORE;

@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, EM_RAIL_EJECTOR} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, EM_RAIL_EJECTOR} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Steel} from '../../components/cat3/steel';
 import {Gear} from '../../components/cat4/gear';
 import {Processor} from '../../components/cat5/processor';

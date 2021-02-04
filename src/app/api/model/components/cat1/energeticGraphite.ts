@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ENERGETIC_GRAPHITE, SMELTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ENERGETIC_GRAPHITE, SMELTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {CoalOre} from '../../baseComponents/coalOre';
 
 export class EnergeticGraphite extends Item {

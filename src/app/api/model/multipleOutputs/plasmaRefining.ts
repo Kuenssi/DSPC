@@ -1,6 +1,6 @@
 import {Item} from '../item';
-import {OIL_REFINERY, PLASMA_REFINING} from '../../util/constants/names';
-import {Input} from '../../util/input';
+import {OIL_REFINERY, PLASMA_REFINING} from '../util/constants/names';
+import {Input} from '../util/input';
 import {RawOil} from '../baseComponents/rawOil';
 
 export class PlasmaRefining extends Item {

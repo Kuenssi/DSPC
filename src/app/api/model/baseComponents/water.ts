@@ -1,5 +1,5 @@
 import {Item} from '../item';
-import {WATER, WATER_PUMP} from '../../util/constants/names';
+import {WATER, WATER_PUMP} from '../util/constants/names';
 
 export class Water extends Item {
   name = WATER;

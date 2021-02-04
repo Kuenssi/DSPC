@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, CONVEYOR_BELT_MK_1} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, CONVEYOR_BELT_MK_1} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronIngot} from '../../components/cat1/ironIngot';
 import {Gear} from '../../components/cat4/gear';
 

@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, WATER_PUMP} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, WATER_PUMP} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronIngot} from '../../components/cat1/ironIngot';
 import {Stone} from '../../components/cat1/stone';
 import {ElectricMotor} from '../../components/cat3/electricMotor';

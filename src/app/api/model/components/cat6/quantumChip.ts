@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, QUANTUM_CHIP} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, QUANTUM_CHIP} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {Processor} from '../cat5/processor';
 import {PlaneFilter} from '../cat4/planeFilter';
 

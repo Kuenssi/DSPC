@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {MAGNET, SMELTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {MAGNET, SMELTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {IronOre} from '../../baseComponents/ironOre';
 
 export class Magnet extends Item {

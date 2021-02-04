@@ -1,5 +1,5 @@
 import {Item} from '../item';
-import {OIL_EXTRACTOR, RAW_OIL, RAW_OIL_SPOT} from '../../util/constants/names';
+import {OIL_EXTRACTOR, RAW_OIL, RAW_OIL_SPOT} from '../util/constants/names';
 
 export class RawOil extends Item {
   name = RAW_OIL;

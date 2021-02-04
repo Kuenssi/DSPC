@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {GRAVITY_MATRIX, RESEARCH_FACILITY} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {GRAVITY_MATRIX, RESEARCH_FACILITY} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {GravitonLens} from '../cat4/gravitonLens';
 import {QuantumChip} from '../cat6/quantumChip';
 

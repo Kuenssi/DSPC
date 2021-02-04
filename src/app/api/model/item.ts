@@ -1,4 +1,4 @@
-import {Input} from '../util/input';
+import {Input} from './util/input';
 
 export class Item {
   name!: string;

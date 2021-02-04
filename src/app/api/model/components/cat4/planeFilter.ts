@@ -1,6 +1,6 @@
 import {Item} from '../../item';
-import {ASSEMBLER, PLANE_FILTER} from '../../../util/constants/names';
-import {Input} from '../../../util/input';
+import {ASSEMBLER, PLANE_FILTER} from '../../util/constants/names';
+import {Input} from '../../util/input';
 import {CasimirCrystal} from '../cat5/casimirCrystal';
 import {TitaniumGlass} from '../cat3/titaniumGlass';
 
