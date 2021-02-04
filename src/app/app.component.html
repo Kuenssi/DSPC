@@ -112,6 +112,8 @@
 
     <mat-divider></mat-divider>
 
+    <button *ngIf="scrolled" (click)="topFunction()" class="toTopButton" title="Beam me up">Top</button>
+
     <div fxLayoutAlign="center">
       <ngx-graph [autoZoom]="true" [autoCenter]="true" class="chart-container" [view]="[1650, 800]"
                  [links]="links" [nodes]="nodes" layout="dagreCluster" [draggingEnabled]="false">

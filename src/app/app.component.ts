@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {Item} from './api/model/item';
 import {AllBuildings} from './api/model/buildings/allBuildings';
 import {AllComponents} from './api/model/components/allComponents';
@@ -35,6 +35,8 @@ export class AppComponent {
 
   overviewMapKeys!: string[];
 
+  scrolled: boolean;
+
   constructor() {
     this.currentAssemblerMultiplier = 0.75;
     this.wantedOutput = 60;
@@ -43,6 +45,27 @@ export class AppComponent {
     this.nodes = [];
     this.links = [];
     this.overviewMapKeys = [];
+    this.scrolled = false;
+  }
+
+  //////////
+  // To top button
+  //////////
+
+  //https://stackoverflow.com/questions/41363175/go-to-top-of-page-on-button-click-in-angular-2
+  @HostListener("window:scroll", []) onWindowScroll() {
+    this.scrollFunction();
+  }
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  scrollFunction() {
+    this.scrolled = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20;
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
   //////////
