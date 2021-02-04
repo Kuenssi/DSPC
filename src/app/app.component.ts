@@ -17,7 +17,11 @@ export class AppComponent {
   title = 'Dyson Sphere Program Calculator';
   version = '0.0.0';
 
-  overviewMap: Map<string, number> = new Map<string, number>();
+  overviewMapBase: Map<string, number> = new Map<string, number>();
+  overviewMapBaseKeys!: string[];
+
+  overviewMapBuilding: Map<string, number> = new Map<string, number>();
+  overviewMapBuildingKeys!: string[];
 
   results: Result[];
 
@@ -33,8 +37,6 @@ export class AppComponent {
   nodes: Node[];
   links: Link[];
 
-  overviewMapKeys!: string[];
-
   scrolled: boolean;
 
   constructor() {
@@ -44,7 +46,8 @@ export class AppComponent {
     this.results = [];
     this.nodes = [];
     this.links = [];
-    this.overviewMapKeys = [];
+    this.overviewMapBaseKeys = [];
+    this.overviewMapBuildingKeys = [];
     this.scrolled = false;
   }
 
@@ -95,28 +98,39 @@ export class AppComponent {
   //////////
   evaluateAllOverviewElements() {
     //Clear old stuff
-    this.overviewMap = new Map<string, number>();
-    this.overviewMapKeys = [];
+    this.overviewMapBase = new Map<string, number>();
+    this.overviewMapBaseKeys = [];
+
+    this.overviewMapBuilding = new Map<string, number>();
+    this.overviewMapBuildingKeys = [];
+
 
     let key;
     //Get values to map
     for (let result of this.results) {
-      if (result.item.baseItem) {
+      if (result.item.baseItem && result.item.name !== WATER) {
         key = result.item.veinType;
+        if (this.overviewMapBase.has(key)) {
+          this.overviewMapBase.set(key, <number>this.overviewMapBase.get(key) + result.neededBuildingsDisplay);
+        } else {
+          this.overviewMapBase = this.overviewMapBase.set(key, result.neededBuildingsDisplay);
+        }
       } else {
         key = result.item.neededMachine;
-      }
-
-      if (this.overviewMap.has(key)) {
-        // @ts-ignore -> ignores the probability of undefined by this.overviewMap.get
-        this.overviewMap.set(key, this.overviewMap.get(key) + result.neededBuildingsDisplay);
-      } else {
-        this.overviewMap = this.overviewMap.set(key, result.neededBuildingsDisplay);
+        if (this.overviewMapBuilding.has(key)) {
+          this.overviewMapBuilding.set(key, <number>this.overviewMapBuilding.get(key) + result.neededBuildingsDisplay);
+        } else {
+          this.overviewMapBuilding = this.overviewMapBuilding.set(key, result.neededBuildingsDisplay);
+        }
       }
     }
 
-    for (let overviewKey of this.overviewMap.keys()) {
-      this.overviewMapKeys.push(overviewKey);
+    for (let overviewKey of this.overviewMapBase.keys()) {
+      this.overviewMapBaseKeys.push(overviewKey);
+    }
+
+    for (let overviewKey of this.overviewMapBuilding.keys()) {
+      this.overviewMapBuildingKeys.push(overviewKey);
     }
   }
 

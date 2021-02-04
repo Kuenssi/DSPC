@@ -11,7 +11,7 @@
 
     <div fxLayout="row">
       <div fxFlex>
-        <div fxLayoutAlign="center">Select your current research progress (Veins utilization):</div>
+        <div fxLayoutAlign="center">Veins utilization level:</div>
         <div fxLayoutAlign="center">
           <mat-radio-group [(ngModel)]="fasterMiningPercent" fxLayout="column" (change)="startCalc()">
             <mat-radio-button [value]="0">Stufe 0</mat-radio-button>
@@ -26,7 +26,7 @@
       </div>
 
       <div fxFlex>
-        <div fxLayoutAlign="center">Select Assembler level</div>
+        <div fxLayoutAlign="center">Assembler level</div>
         <div fxLayoutAlign="center">
           <mat-radio-group [(ngModel)]="currentAssemblerMultiplier" fxLayout="column" (change)="startCalc()">
             <mat-radio-button [value]="0.75">Mk. 1</mat-radio-button>
@@ -37,7 +37,7 @@
       </div>
 
       <div fxFlex>
-        <div fxLayoutAlign="center">Insert your wanted Output:</div>
+        <div fxLayoutAlign="center">Desired Output:</div>
         <div fxLayoutAlign="center">
           <input fxFlex="20" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
           <span>/min</span>
@@ -45,9 +45,16 @@
       </div>
 
       <div *ngIf="results.length > 0" fxFlex>
-        <div fxLayoutAlign="center">Needed Buildings/Veins:</div>
-        <div *ngFor="let overview of overviewMapKeys">
-          <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMap.get(overview))}}</div>
+        <div fxLayoutAlign="center">Needed Nodes:</div>
+        <div *ngFor="let overview of overviewMapBaseKeys">
+          <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMapBase.get(overview))}}</div>
+        </div>
+      </div>
+
+      <div *ngIf="results.length > 0" fxFlex>
+        <div fxLayoutAlign="center">Needed Buildings:</div>
+        <div *ngFor="let overview of overviewMapBuildingKeys">
+          <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMapBuilding.get(overview))}}</div>
         </div>
       </div>
     </div>
