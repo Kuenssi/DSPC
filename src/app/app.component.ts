@@ -1,7 +1,5 @@
 import {Component} from '@angular/core';
 import {Item} from './api/model/item';
-import {AllBuildings} from './api/model/buildings/allBuildings';
-import {AllComponents} from './api/model/components/allComponents';
 import {ASSEMBLER, MINING_MACHINE, RAW_OIL, WATER} from './api/model/util/constants/names';
 import {Input} from './api/model/util/input';
 import {Result} from './api/model/util/result';
@@ -29,9 +27,6 @@ export class AppComponent {
   wantedOutput: number;
 
   fasterMiningPercent: number;
-
-  allBuildings = new AllBuildings();
-  allComponents = new AllComponents();
 
   constructor() {
     this.currentAssemblerMultiplier = 0.75;

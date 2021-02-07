@@ -1,4 +1,4 @@
-<div fxLayout="row" fxFlex xmlns:svg="">
+<div fxLayout="row" fxFlex>
   <div fxLayout="column" fxFlex>
     <div>
       <div fxLayoutAlign="center">{{title}}</div>
@@ -43,6 +43,11 @@
           <input fxFlex="20" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
           <span>/min</span>
         </div>
+        <div> </div>
+        <div fxLayoutAlign="center">Current selected Item: {{wantedItem?.name || ''}}</div>
+        <div>
+          <button fxLayoutAlign="center" (click)="selectBuild.open()">Select Item</button>
+        </div>
       </div>
 
       <div *ngIf="results.length > 0" fxFlex>
@@ -62,17 +67,11 @@
 
     <mat-divider></mat-divider>
 
-    <app-selection-table [table]="allBuildings" (selectCallback)="selectItem($event)"></app-selection-table>
-
-    <mat-divider></mat-divider>
-
-    <app-selection-table [table]="allComponents" (selectCallback)="selectItem($event)"></app-selection-table>
-
-    <mat-divider></mat-divider>
-
     <app-result-graph [results]="results"></app-result-graph>
 
     <app-to-top-button></app-to-top-button>
 
   </div>
 </div>
+
+<selectBuildModal #selectBuild (selectCallback)="selectItem($event)"></selectBuildModal>

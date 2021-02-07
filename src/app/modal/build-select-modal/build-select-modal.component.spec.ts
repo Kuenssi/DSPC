@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelectionTableComponent } from './selection-table.component';
+import { BuildSelectModalComponent } from './build-select-modal.component';
 
-describe('SelectionTableComponent', () => {
-  let component: SelectionTableComponent;
-  let fixture: ComponentFixture<SelectionTableComponent>;
+describe('BuildSelectModalComponent', () => {
+  let component: BuildSelectModalComponent;
+  let fixture: ComponentFixture<BuildSelectModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SelectionTableComponent ]
+      declarations: [ BuildSelectModalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SelectionTableComponent);
+    fixture = TestBed.createComponent(BuildSelectModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
