@@ -37,7 +37,7 @@ import {ModalModule} from './modal/modal.module';
     BrowserAnimationsModule,
     ToTopButtonModule,
     ResultGraphModule,
-    ModalModule
+    ModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

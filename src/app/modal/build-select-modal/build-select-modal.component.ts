@@ -14,6 +14,8 @@ export class BuildSelectModalComponent implements OnInit {
 
   @Output() selectCallback: EventEmitter<Item> = new EventEmitter<Item>();
 
+  currentSelected!: Item;
+
   table!: AllRows;
 
   constructor(private modalService: NgbModal) {
@@ -23,12 +25,20 @@ export class BuildSelectModalComponent implements OnInit {
   ngOnInit() {
   }
 
-  emitSelect(item: Item) {
-    this.selectCallback.emit(item);
+  selectAndClose(item: Item, modal: any) {
+    this.currentSelected = item;
+    modal.close();
+  }
+
+  emitSelect() {
+    this.selectCallback.emit(this.currentSelected);
   }
 
   // Modal stuff
   public open() {
-    this.modalService.open(this.selectBuild, {size: 'lg', centered: true});
+    this.modalService.open(this.selectBuild, {size: 'xl', centered: true}).result.then((result) => {
+      this.emitSelect();
+    }, (reason) => {
+    });
   }
 }

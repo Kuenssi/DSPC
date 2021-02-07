@@ -1,5 +1,5 @@
-<ng-template #selectBuild>
-  <div class="modal-header">
+<ng-template #selectBuild let-modal>
+  <div class="modal-header" fxLayoutAlign="center">
     <h2 class="modal-title" fxLayoutAlign="center">Select Item</h2>
   </div>
   <div class="modal-body" fxLayoutAlign="center">
@@ -20,7 +20,7 @@
           <span>{{cat.categoryNumber}}</span>
         </td>
         <td *ngFor="let component of cat.components" fxFlex fxLayoutGap="0.25rem">
-          <button *ngIf="component.name" fxFlex (click)="emitSelect(component)">{{component.name}}</button>
+          <button *ngIf="component.name" fxFlex (click)="selectAndClose(component, modal)">{{component.name}}</button>
           <button *ngIf="!component.name" fxFlex></button>
         </td>
       </tr>
