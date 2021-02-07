@@ -41,6 +41,9 @@ import {AllRows} from '../util/table/allRows';
 export class AllBuildings extends AllRows {
   constructor() {
     super();
+
+    this.name = 'Buildings';
+
     this.singleRows.push(
       new SingleRow([
         new TeslaTower(),

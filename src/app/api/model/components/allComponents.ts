@@ -69,6 +69,9 @@ import {AllRows} from '../util/table/allRows';
 export class AllComponents extends AllRows {
   constructor() {
     super();
+
+    this.name = 'Components';
+
     this.singleRows.push(
       new SingleRow([
         new IronIngot(),

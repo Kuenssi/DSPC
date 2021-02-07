@@ -3,6 +3,7 @@ import {AllRows} from '../../api/model/util/table/allRows';
 import {Item} from '../../api/model/item';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {AllComponents} from '../../api/model/components/allComponents';
+import {AllBuildings} from '../../api/model/buildings/allBuildings';
 
 @Component({
   selector: 'selectBuildModal',
@@ -15,14 +16,25 @@ export class BuildSelectModalComponent implements OnInit {
   @Output() selectCallback: EventEmitter<Item> = new EventEmitter<Item>();
 
   currentSelected!: Item;
-
   table!: AllRows;
+  components!: boolean;
 
   constructor(private modalService: NgbModal) {
-    this.table = new AllComponents();
+    this.components = false;
   }
 
   ngOnInit() {
+    this.changeTable();
+  }
+
+  changeTable() {
+    this.components = !this.components;
+
+    if (this.components) {
+      this.table = new AllComponents();
+    } else {
+      this.table = new AllBuildings();
+    }
   }
 
   selectAndClose(item: Item, modal: any) {
