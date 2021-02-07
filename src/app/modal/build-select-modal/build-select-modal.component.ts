@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {AllRows} from '../../api/model/util/table/allRows';
 import {Item} from '../../api/model/item';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
@@ -29,8 +29,6 @@ export class BuildSelectModalComponent implements OnInit {
 
   // Modal stuff
   public open() {
-    this.modalService.open(this.selectBuild, {size: 'lg', centered: true}).result.then((result) => {
-    }, (reason) => {
-    });
+    this.modalService.open(this.selectBuild, {size: 'lg', centered: true});
   }
 }

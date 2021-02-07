@@ -43,7 +43,6 @@
           <input fxFlex="20" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
           <span>/min</span>
         </div>
-        <div> </div>
         <div fxLayoutAlign="center">Current selected Item: {{wantedItem?.name || ''}}</div>
         <div>
           <button fxLayoutAlign="center" (click)="selectBuild.open()">Select Item</button>
