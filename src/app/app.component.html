@@ -43,30 +43,39 @@
           <input fxFlex="20" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
           <span>/min</span>
         </div>
+      </div>
+
+      <div fxFlex>
         <div fxLayoutAlign="center">Current selected Item: {{wantedItem?.name || ''}}</div>
         <div fxLayoutAlign="center">
           <button fxLayoutAlign="center" (click)="selectBuild.open()">Select Item</button>
-        </div>
-      </div>
-
-      <div *ngIf="results.length > 0" fxFlex>
-        <div fxLayoutAlign="center">Needed Nodes:</div>
-        <div *ngFor="let overview of overviewMapBaseKeys">
-          <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMapBase.get(overview))}}</div>
-        </div>
-      </div>
-
-      <div *ngIf="results.length > 0" fxFlex>
-        <div fxLayoutAlign="center">Needed Buildings:</div>
-        <div *ngFor="let overview of overviewMapBuildingKeys">
-          <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMapBuilding.get(overview))}}</div>
         </div>
       </div>
     </div>
 
     <mat-divider></mat-divider>
 
-    <app-result-graph [results]="results"></app-result-graph>
+    <div>
+      <app-result-graph [results]="results"></app-result-graph>
+
+      <div fxFlex>
+        <div fxLayoutAlign="center" class="subsection">Needed Nodes:</div>
+        <div *ngIf="results.length > 0">
+          <div *ngFor="let overview of overviewMapBaseKeys">
+            <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMapBase.get(overview))}}</div>
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div fxLayoutAlign="center" class="subsection">Needed Buildings:</div>
+        <div *ngIf="results.length > 0">
+          <div *ngFor="let overview of overviewMapBuildingKeys">
+            <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMapBuilding.get(overview))}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <app-to-top-button></app-to-top-button>
 
