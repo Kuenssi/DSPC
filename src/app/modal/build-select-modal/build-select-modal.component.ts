@@ -17,15 +17,14 @@ export class BuildSelectModalComponent implements OnInit {
   components!: boolean;
 
   constructor() {
-    this.components = false;
   }
 
   ngOnInit() {
-    this.changeTable();
+    this.changeTable(true);
   }
 
-  changeTable() {
-    this.components = !this.components;
+  changeTable(input: boolean) {
+    this.components = input;
 
     if (this.components) {
       this.table = new AllComponents();

@@ -1,18 +1,21 @@
 <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #selectBuild">Select Item</button>
 
-<div id="selectBuild" uk-modal>
+<div id="selectBuild" class="uk-modal-container" uk-modal>
   <div class="uk-modal-dialog uk-modal-body">
-    <h2 class="uk-modal-title">Select Item
-      <button (click)="changeTable()">Change Content</button>
-    </h2>
-    <div class="uk-child-width-expand .uk-grid-small" uk-grid>
-      <div *ngFor="let singleRow of table.singleRows">
-        <div *ngFor="let item of singleRow.components">
+    <ul class="uk-child-width-expand" uk-tab>
+      <li class="uk-active" (click)="changeTable(true)"><a href="">Components</a></li>
+      <li (click)="changeTable(false)"><a href="">Buildings</a></li>
+    </ul>
+    <table class="uk-table">
+      <tbody>
+      <tr *ngFor="let singleRow of table.singleRows">
+        <td *ngFor="let item of singleRow.components">
           <button class="uk-modal-close grid-button" *ngIf="item.name" [title]="item.name"
                   (click)="selectAndClose(item)"><img [src]=item.imageSource></button>
           <button class="grid-button" *ngIf="!item.name"></button>
-        </div>
-      </div>
-    </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
