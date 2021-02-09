@@ -13,4 +13,5 @@ export class PlasmaRefining extends Item {
   outputAmount = 1; //TODO
   // 2x RefinedOil
   // 1x Hydrogen
+  imageSource = 'components/plasma_refining';
 }

@@ -15,4 +15,5 @@ export class ElectricMotor extends Item {
     new Input(new MagneticCoil(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/electric_motor';
 }

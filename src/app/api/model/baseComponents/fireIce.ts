@@ -6,4 +6,5 @@ export class FireIce extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = FIRE_ICE_VEIN;
+  imageSource = 'base/gas_hydrate';
 }

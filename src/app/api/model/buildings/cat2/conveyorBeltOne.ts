@@ -13,4 +13,5 @@ export class ConveyorBeltOne extends Item {
     new Input(new Gear(), 1),
   ];
   outputAmount = 3;
+  imageSource = 'buildings/belt_1';
 }

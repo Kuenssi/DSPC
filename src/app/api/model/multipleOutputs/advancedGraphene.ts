@@ -13,4 +13,5 @@ export class AdvancedGraphene extends Item {
   outputAmount = 1; //TODO
   // 2x Graphene
   // 1x Hydrogen
+  imageSource = 'components/graphene_lv2';
 }

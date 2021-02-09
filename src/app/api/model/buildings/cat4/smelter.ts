@@ -17,4 +17,5 @@ export class Smelter extends Item {
     new Input(new MagneticCoil(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/smelter';
 }

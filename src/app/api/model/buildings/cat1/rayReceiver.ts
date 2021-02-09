@@ -19,4 +19,5 @@ export class RayReceiver extends Item {
     new Input(new SuperMagneticRing(), 20),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/ray_receiver';
 }

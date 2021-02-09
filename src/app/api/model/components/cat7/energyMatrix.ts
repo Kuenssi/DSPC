@@ -13,4 +13,5 @@ export class EnergyMatrix extends Item {
     new Input(new Hydrogen(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/t_matrix';
 }

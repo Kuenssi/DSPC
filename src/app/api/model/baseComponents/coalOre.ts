@@ -6,4 +6,5 @@ export class CoalOre extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = COAL_VEIN;
+  imageSource = 'base/coal_ore';
 }

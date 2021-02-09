@@ -15,4 +15,5 @@ export class TitaniumAlloy extends Item {
     new Input(new SulfuricAcid(), 8),
   ];
   outputAmount = 4;
+  imageSource = 'components/titanium_alloy';
 }

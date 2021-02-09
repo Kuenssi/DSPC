@@ -11,4 +11,5 @@ export class SpaceWarper extends Item {
     new Input(new GravitonLens(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/space_warper';
 }

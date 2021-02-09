@@ -13,4 +13,5 @@ export class WirelessPowerTower extends Item {
     new Input(new PlasmaExciter(), 3),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/charging_pole';
 }

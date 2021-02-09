@@ -17,4 +17,5 @@ export class OilRefinery extends Item {
     new Input(new PlasmaExciter(), 6),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/oil_refinery';
 }

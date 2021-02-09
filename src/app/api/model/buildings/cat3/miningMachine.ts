@@ -17,4 +17,5 @@ export class MiningMachine extends Item {
     new Input(new Gear(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/mining_drill';
 }

@@ -11,4 +11,5 @@ export class IronIngot extends Item {
     new Input(new IronOre(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/iron_plate';
 }

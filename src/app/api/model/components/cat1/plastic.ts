@@ -13,4 +13,5 @@ export class Plastic extends Item {
     new Input(new EnergeticGraphite(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/plastic';
 }

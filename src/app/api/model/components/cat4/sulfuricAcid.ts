@@ -15,4 +15,5 @@ export class SulfuricAcid extends Item {
     new Input(new Water(), 4),
   ];
   outputAmount = 4;
+  imageSource = 'components/sulphuric_acid';
 }

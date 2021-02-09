@@ -13,4 +13,5 @@ export class CarbonNanotube extends Item {
     new Input(new TitaniumIngot(), 1),
   ];
   outputAmount = 2;
+  imageSource = 'components/nanotube';
 }

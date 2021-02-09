@@ -17,4 +17,5 @@ export class EmRailEjector extends Item {
     new Input(new SuperMagneticRing(), 10),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/em_rail_ejector';
 }

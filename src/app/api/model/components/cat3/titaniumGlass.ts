@@ -15,4 +15,5 @@ export class TitaniumGlass extends Item {
     new Input(new Water(), 2),
   ];
   outputAmount = 2;
+  imageSource = 'components/titan_glass';
 }

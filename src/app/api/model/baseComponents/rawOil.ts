@@ -6,4 +6,5 @@ export class RawOil extends Item {
   neededMachine = OIL_EXTRACTOR;
   baseItem = true;
   veinType = RAW_OIL_SPOT;
+  imageSource = 'base/oil';
 }

@@ -13,4 +13,5 @@ export class GravityMatrix extends Item {
     new Input(new QuantumChip(), 1),
   ];
   outputAmount = 2;
+  imageSource = 'components/g_matrix';
 }

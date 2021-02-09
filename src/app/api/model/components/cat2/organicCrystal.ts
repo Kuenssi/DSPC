@@ -15,4 +15,5 @@ export class OrganicCrystal extends Item {
     new Input(new Water(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/crystal_rubber';
 }

@@ -11,4 +11,5 @@ export class Stone extends Item {
     new Input(new StoneOre(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/stone_brick';
 }

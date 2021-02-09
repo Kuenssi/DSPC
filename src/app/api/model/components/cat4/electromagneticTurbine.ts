@@ -13,4 +13,5 @@ export class ElectromagneticTurbine extends Item {
     new Input(new MagneticCoil(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/mag_turbine';
 }

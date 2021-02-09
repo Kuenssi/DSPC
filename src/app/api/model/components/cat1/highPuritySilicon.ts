@@ -11,4 +11,5 @@ export class HighPuritySilicon extends Item {
     new Input(new SiliconOre(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/silicium_high_purity';
 }

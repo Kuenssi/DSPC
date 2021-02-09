@@ -15,4 +15,5 @@ export class WindTurbine extends Item {
     new Input(new MagneticCoil(), 3),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/wind_turbine';
 }

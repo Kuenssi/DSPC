@@ -13,4 +13,5 @@ export class MicrocrystallineComponent extends Item {
     new Input(new CopperIngot(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/micro_component';
 }

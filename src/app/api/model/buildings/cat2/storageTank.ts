@@ -15,4 +15,5 @@ export class StorageTank extends Item {
     new Input(new Glass(), 4),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/storage_tank';
 }

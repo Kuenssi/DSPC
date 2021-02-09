@@ -11,4 +11,5 @@ export class Magnet extends Item {
     new Input(new IronOre(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/magnet';
 }

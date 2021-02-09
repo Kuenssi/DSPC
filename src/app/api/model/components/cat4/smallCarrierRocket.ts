@@ -15,4 +15,5 @@ export class SmallCarrierRocket extends Item {
     new Input(new QuantumChip(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/rocket';
 }

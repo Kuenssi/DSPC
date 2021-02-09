@@ -8,4 +8,5 @@ export class Water extends Item {
   baseItem = true;
   veinType = WATER_PUMP + 's';
   outputAmount = 1;
+  imageSource = 'base/water';
 }

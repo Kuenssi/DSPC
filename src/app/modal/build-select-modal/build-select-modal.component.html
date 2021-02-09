@@ -11,7 +11,7 @@
       <tr *ngFor="let singleRow of table.singleRows">
         <td *ngFor="let item of singleRow.components">
           <button class="uk-modal-close grid-button" *ngIf="item.name" [title]="item.name"
-                  (click)="selectAndClose(item)"><img [src]=item.imageSource></button>
+                  (click)="selectAndClose(item)"><img [src]=buildImageSource(item.imageSource)></button>
           <button class="grid-button" *ngIf="!item.name"></button>
         </td>
       </tr>

@@ -6,4 +6,5 @@ export class SiliconOre extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = SILICON_VEIN;
+  imageSource = 'base/silicium_ore';
 }

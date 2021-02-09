@@ -17,4 +17,5 @@ export class OilExtractor extends Item {
     new Input(new PlasmaExciter(), 4),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/oil_extractor';
 }

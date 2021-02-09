@@ -13,4 +13,5 @@ export class InformationMatrix extends Item {
     new Input(new ParticleBroadband(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/i_matrix';
 }

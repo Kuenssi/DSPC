@@ -13,4 +13,5 @@ export class PlasmaExciter extends Item {
     new Input(new Prisma(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/plasma_generator';
 }

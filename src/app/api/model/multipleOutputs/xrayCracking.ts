@@ -15,4 +15,5 @@ export class XrayCracking extends Item {
   outputAmount = 1; //TODO
   // 3x Hydrogen
   // 1x Energetic Graphite
+  imageSource = 'components/x_ray';
 }

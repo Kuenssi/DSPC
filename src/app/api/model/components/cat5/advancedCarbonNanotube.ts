@@ -11,4 +11,5 @@ export class AdvancedCarbonNanotube extends Item {
     new Input(new SpiniformStalagmiteCrystal(), 2),
   ];
   outputAmount = 2;
+  imageSource = 'components/nanotube_lv2';
 }

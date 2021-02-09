@@ -17,4 +17,5 @@ export class MiniFusionPowerStation extends Item {
     new Input(new Processor(), 4),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/fusion_power_station';
 }

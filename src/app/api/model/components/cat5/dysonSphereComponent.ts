@@ -15,4 +15,5 @@ export class DysonSphereComponent extends Item {
     new Input(new Processor(), 3),
   ];
   outputAmount = 1;
+  imageSource = 'components/dyson_sphere_component';
 }

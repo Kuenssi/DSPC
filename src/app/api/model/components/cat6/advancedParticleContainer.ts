@@ -13,4 +13,5 @@ export class AdvancedParticleContainer extends Item {
     new Input(new CopperIngot(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/partical_capacitor_lv2';
 }

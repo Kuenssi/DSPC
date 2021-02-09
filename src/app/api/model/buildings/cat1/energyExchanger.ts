@@ -17,4 +17,5 @@ export class EnergyExchanger extends Item {
     new Input(new ParticleContainer(), 8),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/energy_exchanger';
 }

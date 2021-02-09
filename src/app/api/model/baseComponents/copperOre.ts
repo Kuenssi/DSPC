@@ -6,4 +6,5 @@ export class CopperOre extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = COPPER_VEIN;
+  imageSource = 'base/copper_ore';
 }

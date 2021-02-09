@@ -13,4 +13,5 @@ export class SorterThree extends Item {
     new Input(new ElectromagneticTurbine(), 1),
   ];
   outputAmount = 2;
+  imageSource = 'buildings/inserter_3';
 }

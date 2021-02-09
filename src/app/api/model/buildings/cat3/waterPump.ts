@@ -17,4 +17,5 @@ export class WaterPump extends Item {
     new Input(new CircuitBoard(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/water_pump';
 }

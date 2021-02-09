@@ -11,4 +11,5 @@ export class TitaniumIngot extends Item {
     new Input(new TitaniumOre(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/titanium_plate';
 }

@@ -6,4 +6,5 @@ export class UnipolarMagnet extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = UNIPOLAR_MAGNET_VEIN;
+  imageSource = 'base/mono_mag_ore';
 }

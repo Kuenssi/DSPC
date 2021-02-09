@@ -15,4 +15,5 @@ export class SatelliteSubstation extends Item {
     new Input(new FrameMaterial(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/orbital_substation';
 }

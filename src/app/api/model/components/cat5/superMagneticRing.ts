@@ -15,4 +15,5 @@ export class SuperMagneticRing extends Item {
     new Input(new EnergeticGraphite(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/hyper_magnetism_ring';
 }

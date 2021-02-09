@@ -15,4 +15,5 @@ export class SolarPanel extends Item {
     new Input(new CircuitBoard(), 4),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/solar_panel';
 }

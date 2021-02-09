@@ -11,4 +11,5 @@ export class Hydrogen extends Item {
     new Input(new RawOil(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'base/hydrogen';
 }

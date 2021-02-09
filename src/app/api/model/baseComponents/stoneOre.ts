@@ -6,4 +6,5 @@ export class StoneOre extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = STONE_VEIN;
+  imageSource = 'base/stone_ore';
 }

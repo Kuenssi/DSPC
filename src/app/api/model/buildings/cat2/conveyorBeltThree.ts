@@ -15,4 +15,5 @@ export class ConveyorBeltThree extends Item {
     new Input(new Graphene(), 1),
   ];
   outputAmount = 3;
+  imageSource = 'buildings/belt_3';
 }

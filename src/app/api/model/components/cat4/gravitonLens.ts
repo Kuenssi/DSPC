@@ -13,4 +13,5 @@ export class GravitonLens extends Item {
     new Input(new StrangeMatter(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/gravity_lens';
 }

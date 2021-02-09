@@ -11,4 +11,5 @@ export class RefinedOil extends Item {
     new Input(new RawOil(), 2),
   ];
   outputAmount = 2;
+  imageSource = 'base/refined_oil';
 }

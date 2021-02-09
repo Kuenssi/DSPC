@@ -13,4 +13,5 @@ export class Thruster extends Item {
     new Input(new CopperIngot(), 3),
   ];
   outputAmount = 1;
+  imageSource = 'components/fuel_thruster';
 }

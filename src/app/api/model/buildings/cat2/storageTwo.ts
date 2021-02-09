@@ -13,4 +13,5 @@ export class StorageTwo extends Item {
     new Input(new Stone(), 8),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/storage_2';
 }

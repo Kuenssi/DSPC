@@ -6,4 +6,5 @@ export class KimberliteOre extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = KIMBERLITE_VEIN;
+  imageSource = 'base/diamond_ore';
 }

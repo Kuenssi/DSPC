@@ -15,4 +15,5 @@ export class InterstellarLogisticsStation extends Item {
     new Input(new ParticleContainer(), 20),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/interstellar_logistic_station';
 }

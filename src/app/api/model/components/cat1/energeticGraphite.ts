@@ -11,4 +11,5 @@ export class EnergeticGraphite extends Item {
     new Input(new CoalOre(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/graphite';
 }

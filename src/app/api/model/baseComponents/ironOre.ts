@@ -6,4 +6,5 @@ export class IronOre extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = IRON_VEIN;
+  imageSource = 'base/iron_ore';
 }

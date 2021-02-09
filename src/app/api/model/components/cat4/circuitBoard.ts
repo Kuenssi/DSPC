@@ -13,4 +13,5 @@ export class CircuitBoard extends Item {
     new Input(new CopperIngot(), 1),
   ];
   outputAmount = 2;
+  imageSource = 'components/circuit_board';
 }

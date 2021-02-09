@@ -17,4 +17,5 @@ export class VerticalLaunchingSilo extends Item {
     new Input(new QuantumChip(), 10),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/vertical_launching_silo';
 }

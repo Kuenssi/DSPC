@@ -13,4 +13,5 @@ export class ReinforcedThruster extends Item {
     new Input(new ElectromagneticTurbine(), 5),
   ];
   outputAmount = 1;
+  imageSource = 'components/ion_thruster';
 }

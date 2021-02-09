@@ -19,4 +19,5 @@ export class MiniParticleCollider extends Item {
     new Input(new Processor(), 8),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/hadron_collider';
 }

@@ -13,4 +13,5 @@ export class SolarSail extends Item {
     new Input(new PhotonCombiner(), 1),
   ];
   outputAmount = 2;
+  imageSource = 'components/solar_collector';
 }

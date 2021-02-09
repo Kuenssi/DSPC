@@ -11,4 +11,5 @@ export class AdvancedDiamond extends Item {
     new Input(new KimberliteOre(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/diamond_lv2';
 }

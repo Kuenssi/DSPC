@@ -11,4 +11,5 @@ export class AdvancedCrystalSilicon extends Item {
     new Input(new FractalSilicon(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/silicium_single_crystal_lv2';
 }

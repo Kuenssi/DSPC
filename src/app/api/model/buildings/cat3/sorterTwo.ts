@@ -13,4 +13,5 @@ export class SorterTwo extends Item {
     new Input(new ElectricMotor(), 1),
   ];
   outputAmount = 2;
+  imageSource = 'buildings/inserter_2';
 }

@@ -11,4 +11,5 @@ export class Gear extends Item {
     new Input(new IronIngot(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/gear_wheel';
 }

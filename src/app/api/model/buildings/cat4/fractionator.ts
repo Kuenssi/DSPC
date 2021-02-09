@@ -17,4 +17,5 @@ export class Fractionator extends Item {
     new Input(new Processor(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/fractionator';
 }

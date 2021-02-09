@@ -13,4 +13,5 @@ export class TitaniumCrystal extends Item {
     new Input(new TitaniumIngot(), 3),
   ];
   outputAmount = 1;
+  imageSource = 'components/titan_crystal';
 }

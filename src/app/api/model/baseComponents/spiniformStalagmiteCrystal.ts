@@ -10,4 +10,5 @@ export class SpiniformStalagmiteCrystal extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = SPINIFORM_STALGMITE_CRYSTAL_VEIN;
+  imageSource = 'base/bamboo_crystal';
 }

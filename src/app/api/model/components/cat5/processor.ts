@@ -13,4 +13,5 @@ export class Processor extends Item {
     new Input(new MicrocrystallineComponent(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/processor';
 }

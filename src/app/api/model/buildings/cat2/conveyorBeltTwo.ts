@@ -13,4 +13,5 @@ export class ConveyorBeltTwo extends Item {
     new Input(new ElectromagneticTurbine(), 1),
   ];
   outputAmount = 3;
+  imageSource = 'buildings/belt_2';
 }

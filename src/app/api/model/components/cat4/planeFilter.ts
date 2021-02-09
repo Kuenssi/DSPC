@@ -13,4 +13,5 @@ export class PlaneFilter extends Item {
     new Input(new TitaniumGlass(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/plane_filter';
 }

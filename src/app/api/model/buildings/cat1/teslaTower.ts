@@ -13,4 +13,5 @@ export class TeslaTower extends Item {
     new Input(new MagneticCoil(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/tesla_coil';
 }

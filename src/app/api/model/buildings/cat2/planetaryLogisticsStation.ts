@@ -17,4 +17,5 @@ export class PlanetaryLogisticsStation extends Item {
     new Input(new ParticleContainer(), 20),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/logistic_station';
 }

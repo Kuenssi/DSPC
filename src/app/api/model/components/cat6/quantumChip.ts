@@ -13,4 +13,5 @@ export class QuantumChip extends Item {
     new Input(new PlaneFilter(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/quantum_processor';
 }

@@ -15,4 +15,5 @@ export class StrangeMatter extends Item {
     new Input(new Deuterium(), 10),
   ];
   outputAmount = 1;
+  imageSource = 'components/strange_matter_generator';
 }

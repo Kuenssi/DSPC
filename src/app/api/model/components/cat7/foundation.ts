@@ -13,4 +13,5 @@ export class Foundation extends Item {
     new Input(new Steel(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/terrain_tool';
 }

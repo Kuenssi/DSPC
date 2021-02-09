@@ -11,4 +11,5 @@ export class SiliconOreFromStone extends Item {
     new Input(new StoneOre(), 10),
   ];
   outputAmount = 1;
+  imageSource = 'base/silicium_ore';
 }

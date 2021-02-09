@@ -13,4 +13,5 @@ export class StructureMatrix extends Item {
     new Input(new TitaniumCrystal(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/c_matrix';
 }

@@ -15,4 +15,5 @@ export class AdvancedCasimirCrystal extends Item {
     new Input(new Hydrogen(), 12),
   ];
   outputAmount = 1;
+  imageSource = 'components/casimir_crystal_lv2';
 }

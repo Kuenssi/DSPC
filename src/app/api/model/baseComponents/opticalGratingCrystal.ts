@@ -6,4 +6,5 @@ export class OpticalGratingCrystal extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = OPTICAL_GRATING_CRYSTAL_VEIN;
+  imageSource = 'base/grating_ore';
 }

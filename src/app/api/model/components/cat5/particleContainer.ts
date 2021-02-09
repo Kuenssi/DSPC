@@ -15,4 +15,5 @@ export class ParticleContainer extends Item {
     new Input(new Graphene(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/partical_capacitor';
 }

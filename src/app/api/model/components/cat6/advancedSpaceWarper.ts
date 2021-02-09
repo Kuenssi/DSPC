@@ -11,4 +11,5 @@ export class AdvancedSpaceWarper extends Item {
     new Input(new GravityMatrix(), 1),
   ];
   outputAmount = 8;
+  imageSource = 'components/space_warper_lv2';
 }

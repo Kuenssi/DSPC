@@ -15,4 +15,5 @@ export class AssemblerTwo extends Item {
     new Input(new Processor(), 4),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/assembler_2';
 }

@@ -6,4 +6,5 @@ export class TitaniumOre extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = TITANIUM_VEIN;
+  imageSource = 'base/titanium_ore';
 }

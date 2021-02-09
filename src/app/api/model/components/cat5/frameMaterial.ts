@@ -15,4 +15,5 @@ export class FrameMaterial extends Item {
     new Input(new HighPuritySilicon(), 1),
   ];
   outputAmount = 6;
+  imageSource = 'components/frame_material';
 }

@@ -17,4 +17,5 @@ export class ThermalPowerStation extends Item {
     new Input(new MagneticCoil(), 4),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/fuel_plant';
 }

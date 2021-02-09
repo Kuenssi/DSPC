@@ -13,4 +13,5 @@ export class Graphene extends Item {
     new Input(new SulfuricAcid(), 1),
   ];
   outputAmount = 2;
+  imageSource = 'components/graphene';
 }

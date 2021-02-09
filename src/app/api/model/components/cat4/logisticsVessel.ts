@@ -15,4 +15,5 @@ export class LogisticsVessel extends Item {
     new Input(new ReinforcedThruster(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/logistic_vessel';
 }

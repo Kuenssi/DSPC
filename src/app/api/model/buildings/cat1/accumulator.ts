@@ -15,4 +15,5 @@ export class Accumulator extends Item {
     new Input(new CrystalSilicon(), 4),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/accumulator';
 }

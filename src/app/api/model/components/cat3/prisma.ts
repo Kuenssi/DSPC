@@ -11,4 +11,5 @@ export class Prisma extends Item {
     new Input(new Glass(), 3),
   ];
   outputAmount = 2;
+  imageSource = 'components/prism';
 }

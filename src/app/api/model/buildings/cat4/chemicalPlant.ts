@@ -17,4 +17,5 @@ export class ChemicalPlant extends Item {
     new Input(new CircuitBoard(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/chemical_plant';
 }

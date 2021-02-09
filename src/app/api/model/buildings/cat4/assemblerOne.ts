@@ -15,4 +15,5 @@ export class AssemblerOne extends Item {
     new Input(new CircuitBoard(), 4),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/assembler_1';
 }

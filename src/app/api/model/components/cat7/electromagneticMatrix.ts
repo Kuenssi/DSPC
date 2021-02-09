@@ -13,4 +13,5 @@ export class ElectromagneticMatrix extends Item {
     new Input(new CircuitBoard(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/e_matrix';
 }

@@ -15,4 +15,5 @@ export class AssemblerThree extends Item {
     new Input(new QuantumChip(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/assembler_3';
 }

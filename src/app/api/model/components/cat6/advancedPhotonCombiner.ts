@@ -13,4 +13,5 @@ export class AdvancedPhotonCombiner extends Item {
     new Input(new CircuitBoard(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/photo_shifter_lv2';
 }

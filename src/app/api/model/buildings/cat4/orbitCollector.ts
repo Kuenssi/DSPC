@@ -17,4 +17,5 @@ export class OrbitCollector extends Item {
     new Input(new Accumulator(), 20),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/orbital_collector';
 }

@@ -11,4 +11,5 @@ export class Deuterium extends Item {
     new Input(new Hydrogen(), 10),
   ];
   outputAmount = 5;
+  imageSource = 'components/deuterium';
 }

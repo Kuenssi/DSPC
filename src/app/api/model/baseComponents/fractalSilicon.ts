@@ -6,4 +6,5 @@ export class FractalSilicon extends Item {
   neededMachine = MINING_MACHINE;
   baseItem = true;
   veinType = FRACTAL_SILICON_VEIN;
+  imageSource = 'base/fractal_silica';
 }

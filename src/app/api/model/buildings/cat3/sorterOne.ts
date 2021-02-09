@@ -13,4 +13,5 @@ export class SorterOne extends Item {
     new Input(new CircuitBoard(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'buildings/inserter_1';
 }

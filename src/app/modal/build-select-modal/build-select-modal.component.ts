@@ -3,6 +3,7 @@ import {AllRows} from '../../api/model/util/table/allRows';
 import {Item} from '../../api/model/item';
 import {AllComponents} from '../../api/model/components/allComponents';
 import {AllBuildings} from '../../api/model/buildings/allBuildings';
+import {IMAGE_ENDING, IMAGE_LOCATION} from '../../api/model/util/constants/locations';
 
 @Component({
   selector: 'selectBuildModal',
@@ -40,5 +41,9 @@ export class BuildSelectModalComponent implements OnInit {
 
   emitSelect() {
     this.selectCallback.emit(this.currentSelected);
+  }
+
+  buildImageSource(imageSource: string): string {
+    return IMAGE_LOCATION + imageSource + IMAGE_ENDING;
   }
 }

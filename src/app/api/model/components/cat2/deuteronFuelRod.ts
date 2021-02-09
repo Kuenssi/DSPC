@@ -15,4 +15,5 @@ export class DeuteronFuelRod extends Item {
     new Input(new SuperMagneticRing(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/deuterium_energy_fuel';
 }

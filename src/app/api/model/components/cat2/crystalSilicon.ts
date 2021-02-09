@@ -11,4 +11,5 @@ export class CrystalSilicon extends Item {
     new Input(new HighPuritySilicon(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/silicium_single_crystal';
 }

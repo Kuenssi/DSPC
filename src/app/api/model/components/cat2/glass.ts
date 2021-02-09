@@ -11,4 +11,5 @@ export class Glass extends Item {
     new Input(new StoneOre(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/glass';
 }

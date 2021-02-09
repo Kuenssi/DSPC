@@ -15,4 +15,5 @@ export class ParticleBroadband extends Item {
     new Input(new Plastic(), 1),
   ];
   outputAmount = 1;
+  imageSource = 'components/particle_wide_band';
 }

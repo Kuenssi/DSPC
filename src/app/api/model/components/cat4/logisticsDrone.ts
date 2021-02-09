@@ -15,4 +15,5 @@ export class LogisticsDrone extends Item {
     new Input(new Thruster(), 2),
   ];
   outputAmount = 1;
+  imageSource = 'components/logistic_drone';
 }

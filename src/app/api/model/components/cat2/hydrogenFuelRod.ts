@@ -13,4 +13,5 @@ export class HydrogenFuelRod extends Item {
     new Input(new Hydrogen(), 5),
   ];
   outputAmount = 1;
+  imageSource = 'components/hydrogen_energy_fuel';
 }
