@@ -12,7 +12,6 @@ import {Result} from './api/model/util/result';
 })
 export class AppComponent {
   title = 'Dyson Sphere Program Calculator';
-  version = '0.0.0';
 
   mark1Mult = 0.75;
   mark2Mult = 1;
