@@ -49,8 +49,7 @@
       <div fxFlex>
         <div fxLayoutAlign="center">Current selected Item: {{wantedItem?.name || ''}}</div>
         <div fxLayoutAlign="center">
-          <button class="uk-button uk-button-primary" fxLayoutAlign="center" (click)="selectBuild.open()">Select Item
-          </button>
+          <selectBuildModal (selectCallback)="selectItem($event)"></selectBuildModal>
         </div>
       </div>
     </div>
@@ -83,5 +82,3 @@
 
   </div>
 </div>
-
-<selectBuildModal #selectBuild (selectCallback)="selectItem($event)"></selectBuildModal>

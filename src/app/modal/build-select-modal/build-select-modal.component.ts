@@ -1,7 +1,6 @@
-import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {AllRows} from '../../api/model/util/table/allRows';
 import {Item} from '../../api/model/item';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {AllComponents} from '../../api/model/components/allComponents';
 import {AllBuildings} from '../../api/model/buildings/allBuildings';
 
@@ -11,15 +10,13 @@ import {AllBuildings} from '../../api/model/buildings/allBuildings';
   styleUrls: ['./build-select-modal.component.css']
 })
 export class BuildSelectModalComponent implements OnInit {
-  @ViewChild('selectBuild') private selectBuild: any;
-
   @Output() selectCallback: EventEmitter<Item> = new EventEmitter<Item>();
 
   currentSelected!: Item;
   table!: AllRows;
   components!: boolean;
 
-  constructor(private modalService: NgbModal) {
+  constructor() {
     this.components = false;
   }
 
@@ -37,20 +34,12 @@ export class BuildSelectModalComponent implements OnInit {
     }
   }
 
-  selectAndClose(item: Item, modal: any) {
+  selectAndClose(item: Item) {
     this.currentSelected = item;
-    modal.close();
+    this.emitSelect();
   }
 
   emitSelect() {
     this.selectCallback.emit(this.currentSelected);
-  }
-
-  // Modal stuff
-  public open() {
-    this.modalService.open(this.selectBuild, {size: 'xl', centered: true}).result.then((result) => {
-      this.emitSelect();
-    }, (reason) => {
-    });
   }
 }

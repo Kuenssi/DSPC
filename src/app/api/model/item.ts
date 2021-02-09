@@ -8,6 +8,7 @@ export class Item {
   outputAmount!: number;
   baseItem!: boolean;
   veinType!: string;
+  imageSource!: string;
 
   constructor() {
     this.inputs = [];
