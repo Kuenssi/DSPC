@@ -2,32 +2,17 @@
   <div class="modal-header">
     <h2 class="modal-title">Select Item</h2>
     <div fxLayoutAlign="end">
-      <button (click)="changeTable()">Change Content</button>
+      <span>{{components ? 'Components' : 'Buildings'}}</span>
+      <button class="uk-button uk-button-primary" (click)="changeTable()">Change Content</button>
     </div>
   </div>
   <div class="modal-body" fxLayoutAlign="center">
-    <table class="mat-table">
-      <thead>
-      <tr fxLayout="row" fxFlex>
-        <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex="5" fxLayoutAlign="center">
-          <span>Cat</span>
-        </th>
-        <th fxLayout="row" fxLayoutGap="0.25rem" fxFlex fxLayoutAlign="center">
-          <span>{{table.name}}</span>
-        </th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let cat of table.singleRows" fxLayoutGap="0.25rem">
-        <td fxFlex="5" fxLayoutAlign="center">
-          <span>{{cat.categoryNumber}}</span>
-        </td>
-        <td *ngFor="let component of cat.components" fxFlex fxLayoutGap="0.25rem">
-          <button *ngIf="component.name" fxFlex (click)="selectAndClose(component, modal)">{{component.name}}</button>
-          <button *ngIf="!component.name" fxFlex></button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    <div class="uk-child-width-expand@m uk-text-center" uk-grid *ngFor="let singleRow of table.singleRows">
+      <div *ngFor="let item of singleRow.components">
+        <button class="uk-button-secondary" fxFlex *ngIf="item.name" [title]="item.name"
+             (click)="selectAndClose(item, modal)">{{item.name}}</button>
+        <button class="uk-button-secondary" fxFlex *ngIf="!item.name"></button>
+      </div>
+    </div>
   </div>
 </ng-template>

@@ -14,6 +14,10 @@ export class AppComponent {
   title = 'Dyson Sphere Program Calculator';
   version = '0.0.0';
 
+  mark1Mult = 0.75;
+  mark2Mult = 1;
+  mark3Mult = 1.5;
+
   overviewMapBase: Map<string, number> = new Map<string, number>();
   overviewMapBaseKeys!: string[];
 
@@ -40,16 +44,43 @@ export class AppComponent {
   //////////
   // Ui Actions
   //////////
+
+  //Mining selection area
+  getCurrentMiningMultiplier(input: number): boolean {
+    return this.fasterMiningPercent === input;
+  }
+
+  setMiningMultiplier(input: number) {
+    this.fasterMiningPercent = input;
+    this.startCalc();
+  }
+
+  //assembler selection area
+  getCurrentAssemblerMultiplier(input: number): boolean {
+    return this.currentAssemblerMultiplier === input;
+  }
+
+  setAssemblerMultiplier(input: number) {
+    this.currentAssemblerMultiplier = input;
+    this.startCalc();
+  }
+
+  //item selection area
   selectItem(item: Item) {
     this.wantedItem = item;
     this.startCalc();
   }
 
+  //output selection area
   setOutput(e: any) {
     this.wantedOutput = Number(e.target.value);
     this.startCalc();
   }
 
+
+  //////////
+  // Logic
+  //////////
   startCalc() {
     if (!this.wantedItem) return;
 
@@ -58,9 +89,6 @@ export class AppComponent {
     this.evaluateAllOverviewElements();
   }
 
-  //////////
-  // Logic
-  //////////
   evaluateAllOverviewElements() {
     //Clear old stuff
     this.overviewMapBase = new Map<string, number>();
