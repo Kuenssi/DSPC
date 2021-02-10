@@ -1,5 +1,13 @@
 .grid-button{
   height:70px;
   width:70px;
-  background: #555555;
+  background: #3B3B3B;
+}
+
+.background {
+  background: #222222;
+}
+
+.uk-button-primary {
+  background: #486581;
 }

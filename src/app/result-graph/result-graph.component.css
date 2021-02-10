@@ -1,5 +1,9 @@
 .chart-container {
-  background: lightgray;
+  background: #3B3B3B;
   width: 1650px;
   height: 800px;
+}
+
+.text-path {
+  fill: white;
 }

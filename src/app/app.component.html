@@ -1,24 +1,25 @@
-<div fxLayout="row" fxFlex>
+<div fxLayout="row" fxFlex class="background">
   <div fxLayout="column" fxFlex>
-    <div>
-      <h1 fxLayoutAlign="center">{{title}}</h1>
-      <a target="_blank" rel="noopener noreferrer" fxLayoutAlign="center"
-         href="https://github.com/Kuenssi/DSPC">source</a>
-    </div>
-
-    <hr class="uk-divider-icon">
+    <h1 class="uk-heading-divider uk-text-center titleString" fxFlex><span>{{title}}</span></h1>
 
     <div fxLayout="row">
       <form class="uk-form-horizontal">
         <div class="uk-form-controls uk-form-controls-text">
-          <label></label>Veins utilization level:<br>
-          <label><input class="uk-radio" type="radio" name="radio0" [checked]="getCurrentMiningMultiplier(0)" (change)="setMiningMultiplier(0)"> Level 00</label><br>
-          <label><input class="uk-radio" type="radio" name="radio1" [checked]="getCurrentMiningMultiplier(10)" (change)="setMiningMultiplier(10)"> Level 01</label><br>
-          <label><input class="uk-radio" type="radio" name="radio2" [checked]="getCurrentMiningMultiplier(20)" (change)="setMiningMultiplier(20)"> Level 02</label><br>
-          <label><input class="uk-radio" type="radio" name="radio3" [checked]="getCurrentMiningMultiplier(30)" (change)="setMiningMultiplier(30)"> Level 03</label><br>
-          <label><input class="uk-radio" type="radio" name="radio4" [checked]="getCurrentMiningMultiplier(40)" (change)="setMiningMultiplier(40)"> Level 04</label><br>
-          <label><input class="uk-radio" type="radio" name="radio5" [checked]="getCurrentMiningMultiplier(50)" (change)="setMiningMultiplier(50)"> Level 05</label><br>
-          <label><input class="uk-radio" type="radio" name="radio6" [checked]="getCurrentMiningMultiplier(60)" (change)="setMiningMultiplier(60)"> Level 06</label>
+          <label class="subsection">Veins utilization level:</label><br>
+          <label><input class="uk-radio" type="radio" name="radio0" [checked]="getCurrentMiningMultiplier(0)"
+                        (change)="setMiningMultiplier(0)"> Level 00</label><br>
+          <label><input class="uk-radio" type="radio" name="radio1" [checked]="getCurrentMiningMultiplier(10)"
+                        (change)="setMiningMultiplier(10)"> Level 01</label><br>
+          <label><input class="uk-radio" type="radio" name="radio2" [checked]="getCurrentMiningMultiplier(20)"
+                        (change)="setMiningMultiplier(20)"> Level 02</label><br>
+          <label><input class="uk-radio" type="radio" name="radio3" [checked]="getCurrentMiningMultiplier(30)"
+                        (change)="setMiningMultiplier(30)"> Level 03</label><br>
+          <label><input class="uk-radio" type="radio" name="radio4" [checked]="getCurrentMiningMultiplier(40)"
+                        (change)="setMiningMultiplier(40)"> Level 04</label><br>
+          <label><input class="uk-radio" type="radio" name="radio5" [checked]="getCurrentMiningMultiplier(50)"
+                        (change)="setMiningMultiplier(50)"> Level 05</label><br>
+          <label><input class="uk-radio" type="radio" name="radio6" [checked]="getCurrentMiningMultiplier(60)"
+                        (change)="setMiningMultiplier(60)"> Level 06</label>
         </div>
       </form>
 
@@ -26,30 +27,47 @@
 
       <form class="uk-form-horizontal">
         <div class="uk-form-controls uk-form-controls-text">
-          <label></label>Assembler level:<br>
-          <label><input class="uk-radio" type="radio" name="radio0" [checked]="getCurrentAssemblerMultiplier(mark1Mult)" (change)="setAssemblerMultiplier(mark1Mult)"> Mk. 01</label><br>
-          <label><input class="uk-radio" type="radio" name="radio1" [checked]="getCurrentAssemblerMultiplier(mark2Mult)" (change)="setAssemblerMultiplier(mark2Mult)"> Mk. 02</label><br>
-          <label><input class="uk-radio" type="radio" name="radio2" [checked]="getCurrentAssemblerMultiplier(mark3Mult)" (change)="setAssemblerMultiplier(mark3Mult)"> Mk. 03</label><br>
-      </div>
+          <label class="subsection">Assembler level:</label><br>
+          <label><input class="uk-radio" type="radio" name="radio0" [checked]="getCurrentAssemblerMultiplier(mark1Mult)"
+                        (change)="setAssemblerMultiplier(mark1Mult)"> Mk. 01</label><br>
+          <label><input class="uk-radio" type="radio" name="radio1" [checked]="getCurrentAssemblerMultiplier(mark2Mult)"
+                        (change)="setAssemblerMultiplier(mark2Mult)"> Mk. 02</label><br>
+          <label><input class="uk-radio" type="radio" name="radio2" [checked]="getCurrentAssemblerMultiplier(mark3Mult)"
+                        (change)="setAssemblerMultiplier(mark3Mult)"> Mk. 03</label><br>
+        </div>
       </form>
 
       <hr class="uk-divider-vertical">
 
       <div fxFlex>
-        <div fxLayoutAlign="center">Desired Output:</div>
+        <div fxLayoutAlign="center" class="subsection">Desired Output:</div>
         <div fxLayoutAlign="center">
           <input fxFlex="20" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
-          <span>/min</span>
+          <label>/min</label>
         </div>
       </div>
 
       <hr class="uk-divider-vertical">
 
       <div fxFlex>
-        <div fxLayoutAlign="center">Current selected Item: {{wantedItem?.name || ''}}</div>
+        <div fxLayoutAlign="center" class="subsection">Current selected Item: {{wantedItem?.name || ''}}</div>
         <div fxLayoutAlign="center">
           <selectBuildModal (selectCallback)="selectItem($event)"></selectBuildModal>
         </div>
+      </div>
+
+      <hr class="uk-divider-vertical">
+
+      <div fxFlex>
+        <span class="subsection" fxLayoutAlign="center">Links:</span>
+        <a target="_blank"
+           rel="noopener noreferrer"
+           fxLayoutAlign="center"
+           href="https://github.com/Kuenssi/DSPC">GitHub Repo</a>
+        <a target="_blank"
+           rel="noopener noreferrer"
+           fxLayoutAlign="center"
+           href="https://store.steampowered.com/app/1366540/Dyson_Sphere_Program">DSP on Steam</a>
       </div>
     </div>
 

@@ -1,12 +1,27 @@
-.versionNumber {
-  color: #555;
-  font-size: large;
-}
-
 .titleString {
-  color: white;
+  color: #829AB1;
 }
 
 .subsection {
   font-size: large;
+}
+
+.background {
+  background: #222222;
+}
+
+label {
+  color: #829AB1;
+}
+
+.subsection {
+  color: #829AB1;
+  font-size: large;
+}
+
+.topRight {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
 }
