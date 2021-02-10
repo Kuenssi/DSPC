@@ -29,3 +29,8 @@ label {
 .neededSectionText {
   color: #829AB1;
 }
+
+.inputField {
+  background: #3B3B3B;
+  color: white;
+}
