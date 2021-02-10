@@ -123,7 +123,10 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "baseHref": "https://kuenssi.github.io/DSPC/",
+            "repo": "https://github.com/Kuenssi/DSPC.git"
+          }
         }
       }
     }
