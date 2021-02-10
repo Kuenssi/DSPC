@@ -1,8 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {AllRows} from '../../api/model/util/table/allRows';
 import {Item} from '../../api/model/item';
-import {AllComponents} from '../../api/model/components/allComponents';
-import {AllBuildings} from '../../api/model/buildings/allBuildings';
+import {ComponentsTable} from '../../api/model/components/componentsTable';
+import {BuildingsTable} from '../../api/model/buildings/buildingsTable';
 import {IMAGE_ENDING, IMAGE_LOCATION} from '../../api/model/util/constants/locations';
 
 @Component({
@@ -28,9 +28,9 @@ export class BuildSelectModalComponent implements OnInit {
     this.components = input;
 
     if (this.components) {
-      this.table = new AllComponents();
+      this.table = ComponentsTable;
     } else {
-      this.table = new AllBuildings();
+      this.table = BuildingsTable;
     }
   }
 
