@@ -47,10 +47,9 @@
       <hr class="uk-divider-vertical">
 
       <div fxFlex>
-        <div fxLayoutAlign="center" class="subsection">Desired Output:</div>
+        <div fxLayoutAlign="center" class="subsection">Desired Output per minute:</div>
         <div fxLayoutAlign="center">
-          <input class="inputField" fxFlex="20" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
-          <label>/min</label>
+          <input class="uk-input" fxFlex="20" type="number" [value]="wantedOutput" (keyup)="setOutput($event)">
         </div>
       </div>
 

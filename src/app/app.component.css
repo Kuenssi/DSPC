@@ -30,7 +30,8 @@ label {
   color: #829AB1;
 }
 
-.inputField {
+.uk-input {
   background: #3B3B3B;
   color: white;
+  border-color: #3B3B3B;
 }

@@ -1,6 +1,6 @@
-.grid-button{
-  height:70px;
-  width:70px;
+.grid-button {
+  height: 70px;
+  width: 70px;
   background: #3B3B3B;
 }
 
@@ -14,4 +14,13 @@
 
 .uk-button-primary:hover {
   background-color: #102A43;
+}
+
+.uk-tab > * > a {
+  color: white;
+}
+
+.uk-tab > .uk-active > a {
+  color: #486581;
+  border-color: #486581;
 }
