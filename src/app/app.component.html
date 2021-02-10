@@ -50,9 +50,12 @@
       <hr class="uk-divider-vertical">
 
       <div fxFlex>
-        <div fxLayoutAlign="center" class="subsection">Current selected Item: {{wantedItem?.name || ''}}</div>
         <div fxLayoutAlign="center">
           <selectBuildModal (selectCallback)="selectItem($event)"></selectBuildModal>
+        </div>
+        <div fxLayoutAlign="center" class="subsection">Current selected Item:</div>
+        <div fxLayoutAlign="center">
+          <img *ngIf="wantedItem"[src]="buildImageSource(wantedItem.imageSource)" [title]="wantedItem.name">
         </div>
       </div>
 
@@ -80,7 +83,8 @@
         <div fxLayoutAlign="center" class="subsection">Needed Nodes:</div>
         <div *ngIf="results.length > 0">
           <div *ngFor="let overview of overviewMapBaseKeys">
-            <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMapBase.get(overview))}}</div>
+            <div class="neededSectionText" fxLayoutAlign="center">{{overview}}
+              : {{setFixedStrings(overviewMapBase.get(overview))}}</div>
           </div>
         </div>
 
@@ -89,7 +93,8 @@
         <div fxLayoutAlign="center" class="subsection">Needed Buildings:</div>
         <div *ngIf="results.length > 0">
           <div *ngFor="let overview of overviewMapBuildingKeys">
-            <div fxLayoutAlign="center">{{overview}}: {{setFixedStrings(overviewMapBuilding.get(overview))}}</div>
+            <div class="neededSectionText" fxLayoutAlign="center">{{overview}}
+              : {{setFixedStrings(overviewMapBuilding.get(overview))}}</div>
           </div>
         </div>
       </div>

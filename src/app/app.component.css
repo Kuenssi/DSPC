@@ -25,3 +25,7 @@ label {
   right: 20px;
   z-index: 99;
 }
+
+.neededSectionText {
+  color: #829AB1;
+}

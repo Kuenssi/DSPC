@@ -3,6 +3,7 @@ import {Item} from './api/model/item';
 import {ASSEMBLER, MINING_MACHINE, RAW_OIL, WATER} from './api/model/util/constants/names';
 import {Input} from './api/model/util/input';
 import {Result} from './api/model/util/result';
+import {IMAGE_ENDING, IMAGE_LOCATION} from './api/model/util/constants/locations';
 
 
 @Component({
@@ -195,5 +196,9 @@ export class AppComponent {
       return number.toFixed(2);
     }
     return '';
+  }
+
+  buildImageSource(imageSource: string): string {
+    return IMAGE_LOCATION + imageSource + IMAGE_ENDING;
   }
 }
