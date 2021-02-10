@@ -11,3 +11,7 @@
 .uk-button-primary {
   background: #486581;
 }
+
+.uk-button-primary:hover {
+  background-color: #102A43;
+}
