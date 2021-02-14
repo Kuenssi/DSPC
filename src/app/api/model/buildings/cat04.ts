@@ -21,7 +21,7 @@ import {
   ReinforcedThruster,
   Steel,
   Stone, SuperMagneticRing
-} from '../components/cat01';
+} from '../components/components';
 
 
 export const Smelter: Item = {

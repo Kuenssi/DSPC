@@ -23,6 +23,8 @@ export const WATER = 'Water';
 export const FIRE_ICE = 'Fire Ice';
 export const HYDROGEN = 'Hydrogen';
 export const REFINED_OIL = 'Refined Oil';
+export const ANTIMATTER = 'Antimatter';
+export const CRITICAL_PHOTON = 'Critical Photon';
 
 // -----------------------------------------------------------------------------------------
 // Veins
@@ -67,6 +69,7 @@ export const ORGANIC_CRYSTAL = 'Organic Crystal';
 export const A_GRAPHENE = '(Recipe) Graphene (Advanced)';
 export const HYDROGEN_FUEL_ROD = 'Hydrogen Fuel Rod';
 export const DEUTERON_FUEL_ROD = 'Deuteron Fuel Rod';
+export const ANTIMATTER_FUEL_ROD = 'Antimatter Fuel Rod';
 
 // 3
 export const STEEL = 'Steel';
@@ -102,6 +105,7 @@ export const PROCESSOR = 'Processor';
 export const CASIMIR_CRYSTAL = 'Casimir Crystal';
 export const PARTICLE_CONTAINER = 'Particle Container';
 export const SPACE_WARPER = 'Space Warper';
+export const ANNIHILATION_CONSTRAINT_SPHERE = 'Annihilation Constraint Sphere';
 export const A_CARBON_NANOTUBE = '(Recipe) Carbon Nanotube (Advanced)';
 export const SOLAR_SAIL = 'Solar Sail';
 export const FRAME_MATERIAL = 'Frame Material';
@@ -138,6 +142,7 @@ export const ACCUMULATOR = 'Accumulator';
 export const RAY_RECEIVER = 'Ray Receiver';
 export const MINI_FUSION_POWER_STATION = 'Mini Fusion Power Station';
 export const ENERGY_EXCHANGER = 'Energy Exchanger';
+export const ARTIFICIAL_STAR = 'Artificial Star';
 
 // 2
 export const CONVEYOR_BELT_MK_1 = 'Conveyor Belt Mk. 1';

@@ -1,11 +1,12 @@
 import {Item} from '../item';
 import {Input} from '../util/input';
 import {
-  HYDROGEN,
+  ANTIMATTER, CRITICAL_PHOTON,
+  HYDROGEN, MINI_PARTICLE_COLLIDER,
   OIL_EXTRACTOR,
   OIL_REFINERY,
   RAW_OIL,
-  RAW_OIL_SPOT,
+  RAW_OIL_SPOT, RAY_RECEIVER,
   REFINED_OIL, WATER,
   WATER_PUMP
 } from '../util/constants/names';
@@ -52,4 +53,26 @@ export const Water: Item = {
   outputAmount: 1,
   processingTime: 1,
   veinType: WATER_PUMP + 's'
+}
+
+export const CriticalPhoton: Item = {
+  baseItem: true,
+  imageSource: 'base/photon_capacitor',
+  inputs: [],
+  name: CRITICAL_PHOTON,
+  neededMachine: RAY_RECEIVER,
+  outputAmount: 1,
+  processingTime: 0,
+  veinType: RAY_RECEIVER + 's'
+}
+
+export const Antimatter: Item = {
+  baseItem: false,
+  imageSource: 'base/antimatter',
+  inputs: [new Input(CriticalPhoton, 2)],
+  name: ANTIMATTER,
+  neededMachine: MINI_PARTICLE_COLLIDER,
+  outputAmount: 2,
+  processingTime: 2,
+  veinType: ''
 }

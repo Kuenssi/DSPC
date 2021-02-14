@@ -6,7 +6,7 @@ import {
   A_DIAMOND,
   A_PARTICLE_CONTAINER,
   A_PHOTON_COMBINER,
-  A_SPACE_WARPER,
+  A_SPACE_WARPER, ANNIHILATION_CONSTRAINT_SPHERE, ANTIMATTER_FUEL_ROD,
   ASSEMBLER,
   CARBON_NANOTUBE,
   CASIMIR_CRYSTAL,
@@ -75,7 +75,7 @@ import {
   StoneOre,
   TitaniumOre, UnipolarMagnet
 } from '../baseComponents/ores';
-import {Hydrogen, RefinedOil, Water} from '../baseComponents/fluids';
+import {Antimatter, Hydrogen, RefinedOil, Water} from '../baseComponents/fluids';
 
 export const CopperIngot: Item = {
   baseItem: false,
@@ -1026,4 +1026,36 @@ export const LogisticsVessel: Item = {
   ],
   outputAmount: 1,
   imageSource: 'components/logistic_vessel',
+}
+
+export const AnnihilationConstraintSphere: Item = {
+  baseItem: false,
+  veinType: '',
+
+  name: ANNIHILATION_CONSTRAINT_SPHERE,
+  processingTime: 20,
+  neededMachine: ASSEMBLER,
+  inputs: [
+    new Input(ParticleContainer, 1),
+    new Input(Processor, 1),
+  ],
+  outputAmount: 1,
+  imageSource: 'components/fusion_capacitor',
+}
+
+export const AntimatterFuelRod: Item = {
+  baseItem: false,
+  veinType: '',
+
+  name: ANTIMATTER_FUEL_ROD,
+  processingTime: 12,
+  neededMachine: ASSEMBLER,
+  inputs: [
+    new Input(Antimatter, 10),
+    new Input(Hydrogen, 10),
+    new Input(AnnihilationConstraintSphere, 1),
+    new Input(TitaniumAlloy, 1),
+  ],
+  outputAmount: 1,
+  imageSource: 'components/antimatter_energy_fuel',
 }

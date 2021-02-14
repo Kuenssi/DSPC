@@ -18,7 +18,7 @@ import {
   Processor, Steel,
   Stone, SuperMagneticRing, TitaniumAlloy,
   TitaniumIngot
-} from '../components/cat01';
+} from '../components/components';
 
 export const StorageTwo: Item = {
   baseItem: false,

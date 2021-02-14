@@ -1,23 +1,39 @@
 import {Item} from '../item';
 import {
   ACCUMULATOR,
-  ASSEMBLER, ENERGY_EXCHANGER,
+  ARTIFICIAL_STAR,
+  ASSEMBLER,
+  ENERGY_EXCHANGER,
   MINI_FUSION_POWER_STATION,
   RAY_RECEIVER,
-  SATELLITE_SUBSTATION, SOLAR_PANEL, TESLA_TOWER, THERMAL_POWER_STATION, WIND_TURBINE, WIRELESS_POWER_TOWER
+  SATELLITE_SUBSTATION,
+  SOLAR_PANEL,
+  TESLA_TOWER,
+  THERMAL_POWER_STATION,
+  WIND_TURBINE,
+  WIRELESS_POWER_TOWER
 } from '../util/constants/names';
 import {Input} from '../util/input';
 import {
   CarbonNanotube,
-  CircuitBoard, CopperIngot, CrystalSilicon, FrameMaterial,
-  Gear, HighPuritySilicon, IronIngot,
-  MagneticCoil, ParticleContainer,
-  PhotonCombiner, PlasmaExciter,
+  CircuitBoard,
+  CopperIngot,
+  CrystalSilicon,
+  FrameMaterial,
+  Gear,
+  HighPuritySilicon,
+  IronIngot,
+  MagneticCoil,
+  ParticleContainer,
+  PhotonCombiner,
+  PlasmaExciter,
   Processor,
+  QuantumChip,
   Steel,
-  Stone, SuperMagneticRing,
+  Stone,
+  SuperMagneticRing,
   TitaniumAlloy
-} from '../components/cat01';
+} from '../components/components';
 
 
 export const Accumulator: Item = {
@@ -166,6 +182,7 @@ export const SatelliteSubstation: Item = {
   imageSource: 'buildings/orbital_substation',
 }
 
+// @ts-ignore
 export const EnergyExchanger: Item = {
   baseItem: false,
   veinType: '',
@@ -181,4 +198,21 @@ export const EnergyExchanger: Item = {
   ],
   outputAmount: 1,
   imageSource: 'buildings/energy_exchanger',
+}
+
+export const ArtificialStar: Item = {
+  baseItem: false,
+  veinType: '',
+
+  name: ARTIFICIAL_STAR,
+  processingTime: 30,
+  neededMachine: ASSEMBLER,
+  inputs: [
+    new Input(TitaniumAlloy, 20),
+    new Input(FrameMaterial, 20),
+    new Input(FrameMaterial, 10),
+    new Input(QuantumChip, 10),
+  ],
+  outputAmount: 1,
+  imageSource: 'buildings/fusion_reactor',
 }

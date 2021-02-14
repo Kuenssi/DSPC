@@ -8,7 +8,7 @@ import {
   AdvancedDiamond,
   AdvancedParticleContainer,
   AdvancedPhotonCombiner,
-  AdvancedSpaceWarper,
+  AdvancedSpaceWarper, AnnihilationConstraintSphere, AntimatterFuelRod,
   CarbonNanotube,
   CasimirCrystal,
   CircuitBoard,
@@ -62,7 +62,7 @@ import {
   TitaniumAlloy, TitaniumCrystal,
   TitaniumGlass,
   TitaniumIngot
-} from './cat01';
+} from './components';
 import {AdvancedGraphene} from '../multipleOutputs/advancedGraphene';
 
 export const ComponentsTable: AllRows = {
@@ -94,7 +94,7 @@ export const ComponentsTable: AllRows = {
       AdvancedGraphene,
       HydrogenFuelRod,
       DeuteronFuelRod,
-      new Placeholder(),
+      AntimatterFuelRod,
     ], 2),
     new SingleRow([
       Steel,
@@ -132,7 +132,7 @@ export const ComponentsTable: AllRows = {
       CasimirCrystal,
       ParticleContainer,
       SpaceWarper,
-      new Placeholder(),
+      AnnihilationConstraintSphere,
       AdvancedCarbonNanotube,
       SolarSail,
       FrameMaterial,

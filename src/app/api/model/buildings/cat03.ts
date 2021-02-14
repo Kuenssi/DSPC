@@ -16,7 +16,7 @@ import {
   MagneticCoil, ParticleContainer, PlasmaExciter, QuantumChip,
   Steel, Stone,
   TitaniumAlloy
-} from '../components/cat01';
+} from '../components/components';
 
 
 export const WaterPump: Item = {

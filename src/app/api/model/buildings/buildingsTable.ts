@@ -2,7 +2,7 @@ import {Placeholder} from '../util/placeholder';
 import {SingleRow} from '../util/table/singleRow';
 import {AllRows} from '../util/table/allRows';
 import {
-  Accumulator, EnergyExchanger, MiniFusionPowerStation, RayReceiver,
+  Accumulator, ArtificialStar, EnergyExchanger, MiniFusionPowerStation, RayReceiver,
   SatelliteSubstation,
   SolarPanel,
   TeslaTower,
@@ -53,7 +53,7 @@ export const BuildingsTable: AllRows = {
       MiniFusionPowerStation,
       Accumulator,
       EnergyExchanger,
-      new Placeholder(),
+      ArtificialStar,
     ], 1),
     new SingleRow([
       ConveyorBeltOne,
