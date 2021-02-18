@@ -748,7 +748,7 @@ export const FrameMaterial: Item = {
     new Input(TitaniumAlloy, 1),
     new Input(HighPuritySilicon, 1),
   ],
-  outputAmount: 6,
+  outputAmount: 1,
   imageSource: 'components/frame_material',
 }
 
