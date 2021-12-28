@@ -120,9 +120,21 @@
             "baseHref": "https://kuenssi.github.io/DSPC/",
             "repo": "https://github.com/Kuenssi/DSPC.git"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "dspc"
+  "defaultProject": "dspc",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
