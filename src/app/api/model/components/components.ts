@@ -945,7 +945,7 @@ export const EnergyMatrix: Item = {
     new Input(Hydrogen, 2),
   ],
   outputAmount: 1,
-  imageSource: 'components/t_matrix',
+  imageSource: 'components/e_matrix',
 }
 
 export const ElectromagneticMatrix: Item = {
@@ -960,7 +960,7 @@ export const ElectromagneticMatrix: Item = {
     new Input(CircuitBoard, 1),
   ],
   outputAmount: 1,
-  imageSource: 'components/e_matrix',
+  imageSource: 'components/t_matrix',
 }
 
 
